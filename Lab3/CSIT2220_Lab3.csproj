@@ -49,7 +49,6 @@
     <Compile Include="Additive.cs" />
     <Compile Include="Day.cs" />
     <Compile Include="Drink.cs" />
-    <Compile Include="DrinkType.cs" />
     <Compile Include="Summary.cs" />
     <Compile Include="UIMain.cs">
       <SubType>Form</SubType>

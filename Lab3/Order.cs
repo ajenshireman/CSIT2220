@@ -21,9 +21,17 @@ namespace CSIT2220_Lab3
         private List<Drink> drinks; // List of drinks in this order
         /* End Variable Declarations */
 
+        /* Constructor */
         public Order ()
         {
+            drinks = new List<Drink>();
+        }
 
+        // Return true if the order contains drinks
+        public bool isValid ()
+        {
+            if ( drinks.Count > 0 ) { return true; }
+            else { return false; }
         }
 
         // Add a drink to the order

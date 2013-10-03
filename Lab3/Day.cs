@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace CSIT2220_Lab3
 {
@@ -24,9 +25,10 @@ namespace CSIT2220_Lab3
 
         /* Constructor */
         // Create a new Day for the current date.
-        Day ()
+        public Day ()
         {
             date = DateTime.Now;
+            orders = new List<Order>();
         }
 
         /* Public Methods */
@@ -57,6 +59,11 @@ namespace CSIT2220_Lab3
                 // Incement number of orders
                 numOrders++;
             }
+
+            String msg = "Orders: " + numOrders + "\n" +
+                         "Drinks: " + numDrinks + "\n" +
+                         "Sales: " + sales.ToString("c");
+            MessageBox.Show(msg, "Daily Summary");
             return new Summary(numOrders, numDrinks, sales);
         }
     }

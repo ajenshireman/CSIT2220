@@ -57,9 +57,9 @@
             this.rbtSize16 = new System.Windows.Forms.RadioButton();
             this.rbtSize12 = new System.Windows.Forms.RadioButton();
             this.grpAdditives = new System.Windows.Forms.GroupBox();
-            this.rbtAddCoolDownRemedey = new System.Windows.Forms.CheckBox();
-            this.rbtAddEnergyBooster = new System.Windows.Forms.CheckBox();
-            this.rbtAddVitaminPack = new System.Windows.Forms.CheckBox();
+            this.cbxAddCoolDownRemedey = new System.Windows.Forms.CheckBox();
+            this.cbxAddEnergyBooster = new System.Windows.Forms.CheckBox();
+            this.cbxAddVitaminPack = new System.Windows.Forms.CheckBox();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.btnDrinkAdd = new System.Windows.Forms.Button();
@@ -110,14 +110,14 @@
             // 
             this.summaryToolStripMenuItem.Name = "summaryToolStripMenuItem";
             this.summaryToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.summaryToolStripMenuItem.Text = "Summary";
+            this.summaryToolStripMenuItem.Text = "&Summary";
             this.summaryToolStripMenuItem.Click += new System.EventHandler(this.summaryToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
@@ -135,28 +135,28 @@
             // 
             this.addToOrderToolStripMenuItem.Name = "addToOrderToolStripMenuItem";
             this.addToOrderToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.addToOrderToolStripMenuItem.Text = "Add to Order";
+            this.addToOrderToolStripMenuItem.Text = "&Add to Order";
             this.addToOrderToolStripMenuItem.Click += new System.EventHandler(this.addToOrderToolStripMenuItem_Click);
             // 
             // clearDrinkToolStripMenuItem
             // 
             this.clearDrinkToolStripMenuItem.Name = "clearDrinkToolStripMenuItem";
             this.clearDrinkToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.clearDrinkToolStripMenuItem.Text = "Clear Drink";
+            this.clearDrinkToolStripMenuItem.Text = "C&lear Drink";
             this.clearDrinkToolStripMenuItem.Click += new System.EventHandler(this.clearDrinkToolStripMenuItem_Click);
             // 
             // submitOrderToolStripMenuItem
             // 
             this.submitOrderToolStripMenuItem.Name = "submitOrderToolStripMenuItem";
             this.submitOrderToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.submitOrderToolStripMenuItem.Text = "Submit Order";
+            this.submitOrderToolStripMenuItem.Text = "Submit &Order";
             this.submitOrderToolStripMenuItem.Click += new System.EventHandler(this.submitOrderToolStripMenuItem_Click);
             // 
             // clearOrderToolStripMenuItem
             // 
             this.clearOrderToolStripMenuItem.Name = "clearOrderToolStripMenuItem";
             this.clearOrderToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.clearOrderToolStripMenuItem.Text = "Clear Order";
+            this.clearOrderToolStripMenuItem.Text = "&Clear Order";
             this.clearOrderToolStripMenuItem.Click += new System.EventHandler(this.clearOrderToolStripMenuItem_Click);
             // 
             // veiwToolStripMenuItem
@@ -172,14 +172,14 @@
             // 
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
             this.fontToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
-            this.fontToolStripMenuItem.Text = "Font";
+            this.fontToolStripMenuItem.Text = "&Font";
             this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
             // 
             // colorToolStripMenuItem
             // 
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
             this.colorToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
-            this.colorToolStripMenuItem.Text = "Color";
+            this.colorToolStripMenuItem.Text = "&Color";
             this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
@@ -194,7 +194,8 @@
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Text = "&About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // grpDrinkType
             // 
@@ -210,6 +211,7 @@
             // 
             // rbtTypeNone
             // 
+            this.rbtTypeNone.AutoCheck = false;
             this.rbtTypeNone.AutoSize = true;
             this.rbtTypeNone.Checked = true;
             this.rbtTypeNone.Location = new System.Drawing.Point(76, 9);
@@ -220,7 +222,6 @@
             this.rbtTypeNone.Text = "No Drink";
             this.rbtTypeNone.UseVisualStyleBackColor = true;
             this.rbtTypeNone.Visible = false;
-            this.rbtTypeNone.CheckedChanged += rbtType_CheckedChanged;
             // 
             // grpSmoothie
             // 
@@ -236,39 +237,36 @@
             // 
             // rbtTypeWheatBerry
             // 
+            this.rbtTypeWheatBerry.AutoCheck = false;
             this.rbtTypeWheatBerry.AutoSize = true;
             this.rbtTypeWheatBerry.Location = new System.Drawing.Point(15, 65);
             this.rbtTypeWheatBerry.Name = "rbtTypeWheatBerry";
             this.rbtTypeWheatBerry.Size = new System.Drawing.Size(84, 17);
             this.rbtTypeWheatBerry.TabIndex = 2;
-            this.rbtTypeWheatBerry.TabStop = true;
             this.rbtTypeWheatBerry.Text = "Wheat Berry";
             this.rbtTypeWheatBerry.UseVisualStyleBackColor = true;
-            this.rbtTypeWheatBerry.CheckedChanged += rbtType_CheckedChanged;
             // 
             // rbtTypeStrawberryBanana
             // 
+            this.rbtTypeStrawberryBanana.AutoCheck = false;
             this.rbtTypeStrawberryBanana.AutoSize = true;
             this.rbtTypeStrawberryBanana.Location = new System.Drawing.Point(15, 42);
             this.rbtTypeStrawberryBanana.Name = "rbtTypeStrawberryBanana";
             this.rbtTypeStrawberryBanana.Size = new System.Drawing.Size(115, 17);
             this.rbtTypeStrawberryBanana.TabIndex = 1;
-            this.rbtTypeStrawberryBanana.TabStop = true;
             this.rbtTypeStrawberryBanana.Text = "Strawberry-Banana";
             this.rbtTypeStrawberryBanana.UseVisualStyleBackColor = true;
-            this.rbtTypeStrawberryBanana.CheckedChanged += rbtType_CheckedChanged;
             // 
             // rbtTypePomegranate
             // 
+            this.rbtTypePomegranate.AutoCheck = false;
             this.rbtTypePomegranate.AutoSize = true;
             this.rbtTypePomegranate.Location = new System.Drawing.Point(15, 19);
             this.rbtTypePomegranate.Name = "rbtTypePomegranate";
             this.rbtTypePomegranate.Size = new System.Drawing.Size(88, 17);
             this.rbtTypePomegranate.TabIndex = 0;
-            this.rbtTypePomegranate.TabStop = true;
             this.rbtTypePomegranate.Text = "Pomegranate";
             this.rbtTypePomegranate.UseVisualStyleBackColor = true;
-            this.rbtTypePomegranate.CheckedChanged += rbtType_CheckedChanged;
             // 
             // grpJuice
             // 
@@ -283,27 +281,25 @@
             // 
             // rbtTypeVegetable
             // 
+            this.rbtTypeVegetable.AutoCheck = false;
             this.rbtTypeVegetable.AutoSize = true;
             this.rbtTypeVegetable.Location = new System.Drawing.Point(15, 42);
             this.rbtTypeVegetable.Name = "rbtTypeVegetable";
             this.rbtTypeVegetable.Size = new System.Drawing.Size(73, 17);
             this.rbtTypeVegetable.TabIndex = 1;
-            this.rbtTypeVegetable.TabStop = true;
             this.rbtTypeVegetable.Text = "Vegetable";
             this.rbtTypeVegetable.UseVisualStyleBackColor = true;
-            this.rbtTypeVegetable.CheckedChanged += rbtType_CheckedChanged;
             // 
             // rbtTypeFruit
             // 
+            this.rbtTypeFruit.AutoCheck = false;
             this.rbtTypeFruit.AutoSize = true;
             this.rbtTypeFruit.Location = new System.Drawing.Point(15, 19);
             this.rbtTypeFruit.Name = "rbtTypeFruit";
             this.rbtTypeFruit.Size = new System.Drawing.Size(45, 17);
             this.rbtTypeFruit.TabIndex = 0;
-            this.rbtTypeFruit.TabStop = true;
             this.rbtTypeFruit.Text = "Fruit";
             this.rbtTypeFruit.UseVisualStyleBackColor = true;
-            this.rbtTypeFruit.CheckedChanged += rbtType_CheckedChanged;
             // 
             // grpSize
             // 
@@ -320,6 +316,7 @@
             // 
             // rbtSizeNone
             // 
+            this.rbtSizeNone.AutoCheck = false;
             this.rbtSizeNone.AutoSize = true;
             this.rbtSizeNone.Checked = true;
             this.rbtSizeNone.Location = new System.Drawing.Point(76, 19);
@@ -330,10 +327,10 @@
             this.rbtSizeNone.Text = "No Size";
             this.rbtSizeNone.UseVisualStyleBackColor = true;
             this.rbtSizeNone.Visible = false;
-            this.rbtSizeNone.CheckedChanged += this.rbtSize_CheckedChanged;
             // 
             // rbtSize20
             // 
+            this.rbtSize20.AutoCheck = false;
             this.rbtSize20.AutoSize = true;
             this.rbtSize20.Location = new System.Drawing.Point(16, 65);
             this.rbtSize20.Name = "rbtSize20";
@@ -341,10 +338,10 @@
             this.rbtSize20.TabIndex = 2;
             this.rbtSize20.Text = "20 oz.";
             this.rbtSize20.UseVisualStyleBackColor = true;
-            this.rbtSize20.CheckedChanged += this.rbtSize_CheckedChanged;
             // 
             // rbtSize16
             // 
+            this.rbtSize16.AutoCheck = false;
             this.rbtSize16.AutoSize = true;
             this.rbtSize16.Location = new System.Drawing.Point(16, 42);
             this.rbtSize16.Name = "rbtSize16";
@@ -352,10 +349,10 @@
             this.rbtSize16.TabIndex = 1;
             this.rbtSize16.Text = "16 oz.";
             this.rbtSize16.UseVisualStyleBackColor = true;
-            this.rbtSize16.CheckedChanged += this.rbtSize_CheckedChanged;
             // 
             // rbtSize12
             // 
+            this.rbtSize12.AutoCheck = false;
             this.rbtSize12.AutoSize = true;
             this.rbtSize12.Location = new System.Drawing.Point(16, 19);
             this.rbtSize12.Name = "rbtSize12";
@@ -363,13 +360,12 @@
             this.rbtSize12.TabIndex = 0;
             this.rbtSize12.Text = "12 oz.";
             this.rbtSize12.UseVisualStyleBackColor = true;
-            this.rbtSize12.CheckedChanged += this.rbtSize_CheckedChanged;
             // 
             // grpAdditives
             // 
-            this.grpAdditives.Controls.Add(this.rbtAddCoolDownRemedey);
-            this.grpAdditives.Controls.Add(this.rbtAddEnergyBooster);
-            this.grpAdditives.Controls.Add(this.rbtAddVitaminPack);
+            this.grpAdditives.Controls.Add(this.cbxAddCoolDownRemedey);
+            this.grpAdditives.Controls.Add(this.cbxAddEnergyBooster);
+            this.grpAdditives.Controls.Add(this.cbxAddVitaminPack);
             this.grpAdditives.Location = new System.Drawing.Point(191, 184);
             this.grpAdditives.Name = "grpAdditives";
             this.grpAdditives.Size = new System.Drawing.Size(156, 105);
@@ -377,35 +373,38 @@
             this.grpAdditives.TabStop = false;
             this.grpAdditives.Text = "Additives";
             // 
-            // rbtAddCoolDownRemedey
+            // cbxAddCoolDownRemedey
             // 
-            this.rbtAddCoolDownRemedey.AutoSize = true;
-            this.rbtAddCoolDownRemedey.Location = new System.Drawing.Point(8, 65);
-            this.rbtAddCoolDownRemedey.Name = "rbtAddCoolDownRemedey";
-            this.rbtAddCoolDownRemedey.Size = new System.Drawing.Size(120, 17);
-            this.rbtAddCoolDownRemedey.TabIndex = 2;
-            this.rbtAddCoolDownRemedey.Text = "Cool Down Remedy";
-            this.rbtAddCoolDownRemedey.UseVisualStyleBackColor = true;
+            this.cbxAddCoolDownRemedey.AutoSize = true;
+            this.cbxAddCoolDownRemedey.Location = new System.Drawing.Point(8, 65);
+            this.cbxAddCoolDownRemedey.Name = "cbxAddCoolDownRemedey";
+            this.cbxAddCoolDownRemedey.Size = new System.Drawing.Size(120, 17);
+            this.cbxAddCoolDownRemedey.TabIndex = 2;
+            this.cbxAddCoolDownRemedey.Text = "Cool Down Remedy";
+            this.cbxAddCoolDownRemedey.UseVisualStyleBackColor = true;
+            this.cbxAddCoolDownRemedey.CheckedChanged += new System.EventHandler(this.rbtAddCoolDownRemedey_CheckedChanged);
             // 
-            // rbtAddEnergyBooster
+            // cbxAddEnergyBooster
             // 
-            this.rbtAddEnergyBooster.AutoSize = true;
-            this.rbtAddEnergyBooster.Location = new System.Drawing.Point(8, 43);
-            this.rbtAddEnergyBooster.Name = "rbtAddEnergyBooster";
-            this.rbtAddEnergyBooster.Size = new System.Drawing.Size(98, 17);
-            this.rbtAddEnergyBooster.TabIndex = 1;
-            this.rbtAddEnergyBooster.Text = "Energy Booster";
-            this.rbtAddEnergyBooster.UseVisualStyleBackColor = true;
+            this.cbxAddEnergyBooster.AutoSize = true;
+            this.cbxAddEnergyBooster.Location = new System.Drawing.Point(8, 43);
+            this.cbxAddEnergyBooster.Name = "cbxAddEnergyBooster";
+            this.cbxAddEnergyBooster.Size = new System.Drawing.Size(98, 17);
+            this.cbxAddEnergyBooster.TabIndex = 1;
+            this.cbxAddEnergyBooster.Text = "Energy Booster";
+            this.cbxAddEnergyBooster.UseVisualStyleBackColor = true;
+            this.cbxAddEnergyBooster.CheckedChanged += new System.EventHandler(this.rbtAddEnergyBooster_CheckedChanged);
             // 
-            // rbtAddVitaminPack
+            // cbxAddVitaminPack
             // 
-            this.rbtAddVitaminPack.AutoSize = true;
-            this.rbtAddVitaminPack.Location = new System.Drawing.Point(8, 20);
-            this.rbtAddVitaminPack.Name = "rbtAddVitaminPack";
-            this.rbtAddVitaminPack.Size = new System.Drawing.Size(88, 17);
-            this.rbtAddVitaminPack.TabIndex = 0;
-            this.rbtAddVitaminPack.Text = "Vitamin Pack";
-            this.rbtAddVitaminPack.UseVisualStyleBackColor = true;
+            this.cbxAddVitaminPack.AutoSize = true;
+            this.cbxAddVitaminPack.Location = new System.Drawing.Point(8, 20);
+            this.cbxAddVitaminPack.Name = "cbxAddVitaminPack";
+            this.cbxAddVitaminPack.Size = new System.Drawing.Size(88, 17);
+            this.cbxAddVitaminPack.TabIndex = 0;
+            this.cbxAddVitaminPack.Text = "Vitamin Pack";
+            this.cbxAddVitaminPack.UseVisualStyleBackColor = true;
+            this.cbxAddVitaminPack.CheckedChanged += new System.EventHandler(this.rbtAddVitaminPack_CheckedChanged);
             // 
             // btnDrinkAdd
             // 
@@ -539,7 +538,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "uiMain";
-            this.Text = "Form1";
+            this.Text = "Pellissippi State Fitness Center Juice Bar";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.grpDrinkType.ResumeLayout(false);
@@ -588,9 +587,9 @@
         private System.Windows.Forms.RadioButton rbtSize16;
         private System.Windows.Forms.RadioButton rbtSize12;
         private System.Windows.Forms.GroupBox grpAdditives;
-        private System.Windows.Forms.CheckBox rbtAddCoolDownRemedey;
-        private System.Windows.Forms.CheckBox rbtAddEnergyBooster;
-        private System.Windows.Forms.CheckBox rbtAddVitaminPack;
+        private System.Windows.Forms.CheckBox cbxAddCoolDownRemedey;
+        private System.Windows.Forms.CheckBox cbxAddEnergyBooster;
+        private System.Windows.Forms.CheckBox cbxAddVitaminPack;
         private System.Windows.Forms.ToolStripMenuItem veiwToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fontToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem colorToolStripMenuItem;

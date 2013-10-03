@@ -50,17 +50,17 @@
     <Compile Include="Day.cs" />
     <Compile Include="Drink.cs" />
     <Compile Include="Summary.cs" />
-    <Compile Include="UIMain.cs">
+    <Compile Include="UIOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UIMain.Designer.cs">
-      <DependentUpon>UIMain.cs</DependentUpon>
+    <Compile Include="UIOrder.Designer.cs">
+      <DependentUpon>UIOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Order.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="UIMain.resx">
-      <DependentUpon>UIMain.cs</DependentUpon>
+    <EmbeddedResource Include="UIOrder.resx">
+      <DependentUpon>UIOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

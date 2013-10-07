@@ -9,11 +9,17 @@ using System.Windows.Forms;
 
 namespace CSIT2220_Lab4
 {
-    public partial class Form1 : Form
+    public partial class SplashForm : Form
     {
-        public Form1 ()
+        public SplashForm ()
         {
             InitializeComponent();
+            timer1.Start();
+        }
+
+        private void timer1_Tick ( object sender, EventArgs e )
+        {
+            this.Close();
         }
     }
 }

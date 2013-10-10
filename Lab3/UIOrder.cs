@@ -21,6 +21,9 @@ namespace CSIT2220_Lab3
 {
     public partial class uiMain : Form
     {
+        /* Constants */
+        private const int DEFAULT_DRINK_QUANTITY = 1;
+
         /* Lists containing the drink type and size selection radio buttons */
         private List<RadioButton> drinkTypeRadioButtons;
         private List<RadioButton> drinkSizeRadioButtons;
@@ -29,20 +32,27 @@ namespace CSIT2220_Lab3
         private List<Additive> additiveList;
 
         /* Variable Declarations */
-        Day currentDay;
-        Order currentOrder;
-        Drink currentDrink;
+        private Day currentDay;
+        private Order currentOrder;
+        private Drink currentDrink;
+        private int drinkQuantity;
         /* End Variable Declarations */
 
         public uiMain()
         {
             InitializeComponent();
+            startup();
+        }
+
+        #region ConstructorMethods
+        private void startup () {
             InitializeDrinkTypeRadioButtons();
             InitializeDrinkSizeRadioButtons();
             InitializeAdditives();
             currentDay = new Day();
             currentOrder = new Order();
             currentDrink = new Drink();
+            updateDrinkQuantity(DEFAULT_DRINK_QUANTITY);
             updateDrink();
             updateOrder();
         }
@@ -90,6 +100,7 @@ namespace CSIT2220_Lab3
         {
             additiveList = Additive.getAdditiveList();
         }
+        #endregion
 
         #region EventHandlers
         /* Menu */
@@ -137,6 +148,11 @@ namespace CSIT2220_Lab3
         }
 
         // Help
+        private void helpToolStripMenuItem1_Click ( object sender, EventArgs e )
+        {
+            showHelpDialog();
+        }
+
         private void aboutToolStripMenuItem_Click ( object sender, EventArgs e )
         {
             showAboutDialog();
@@ -153,6 +169,11 @@ namespace CSIT2220_Lab3
         private void btnDrinkClear_Click ( object sender, EventArgs e )
         {
             clearDrink();
+        }
+
+        private void tbxDrinkQuantity_TextChanged ( object sender, EventArgs e )
+        {
+            updateDrinkTotal();
         }
 
         // Order
@@ -240,7 +261,10 @@ namespace CSIT2220_Lab3
         {
             if ( currentDrink.isValid() )
             {
-                currentOrder.addDrink(currentDrink);
+                for ( int i = 0; i < drinkQuantity; i++ )
+                {
+                    currentOrder.addDrink(currentDrink);
+                }
                 updateOrder();
                 clearDrink();
             }
@@ -254,6 +278,7 @@ namespace CSIT2220_Lab3
         private void clearDrink ()
         {
             currentDrink = new Drink();
+            updateDrinkQuantity(DEFAULT_DRINK_QUANTITY);
             setDrinkSize(rbtSizeNone);
             setDrinkType(rbtTypeNone);
             cbxAddVitaminPack.Checked = false;
@@ -404,6 +429,36 @@ namespace CSIT2220_Lab3
         {
             //if ( !currentDrink.isValid() ) { return; }
             tbxDrinkPrice.Text = currentDrink.getPrice().ToString("c");
+            updateDrinkTotal();
+        }
+
+        // Update the total cost of the current drink
+        private void updateDrinkTotal ()
+        {
+
+            decimal drinkPrice = currentDrink.getPrice();
+            try
+            {
+                drinkQuantity = int.Parse(tbxDrinkQuantity.Text);
+            }
+            catch ( FormatException e )
+            {
+                // ignore
+            }
+            decimal drinkTotal = drinkPrice * drinkQuantity;
+            tbxDrinkTotal.Text = drinkTotal.ToString("c");
+        }
+
+        // Update the quantity of the current drink
+        private void updateDrinkQuantity ( int newQuantity )
+        {
+            tbxDrinkQuantity.Text = newQuantity.ToString();
+            //updateDrinkTotal();
+        }
+
+        private void updateDrinkQuantity ( string newQuantity )
+        {
+            updateDrinkTotal();
         }
 
         private void changeFontColor ()
@@ -422,9 +477,20 @@ namespace CSIT2220_Lab3
 
         private void showAboutDialog ()
         {
-            string msg = "Some information about the program";
+            string msg = "CSIT 2220 Lab 3\n" + 
+                         "Author: Ajen Shireman\n\n" + 
+                         "Drink order form";
 
             MessageBox.Show(msg, "About");
+        }
+
+        private void showHelpDialog () {
+            string msg = "Select drink type, size, additives, and quantity.\n" + 
+                         "Select \"Add to Order\" to add the current drink(s) to your order or \"Clear Drink\" to clear the current selection.\n" + 
+                         "Select \"Submit Order\" to confirm your order or \"Clear Order\" to start over.\n" + 
+                         "A summary of all orders can be accessed form the File menu.";
+
+            MessageBox.Show(msg, "Help");
         }
     }
 }

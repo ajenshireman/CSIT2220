@@ -65,6 +65,10 @@
             this.btnDrinkAdd = new System.Windows.Forms.Button();
             this.btnDrinkClear = new System.Windows.Forms.Button();
             this.grpDrinkInfo = new System.Windows.Forms.GroupBox();
+            this.tbxDrinkTotal = new System.Windows.Forms.TextBox();
+            this.lblDrinkTotal = new System.Windows.Forms.Label();
+            this.tbxDrinkQuantity = new System.Windows.Forms.TextBox();
+            this.lblDrinkQuantity = new System.Windows.Forms.Label();
             this.tbxDrinkPrice = new System.Windows.Forms.TextBox();
             this.lblDrinkPrice = new System.Windows.Forms.Label();
             this.grpOrderInfo = new System.Windows.Forms.GroupBox();
@@ -74,6 +78,7 @@
             this.tbxOrderItems = new System.Windows.Forms.TextBox();
             this.lblOrderTotal = new System.Windows.Forms.Label();
             this.lblOrderItems = new System.Windows.Forms.Label();
+            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.grpDrinkType.SuspendLayout();
             this.grpSmoothie.SuspendLayout();
@@ -185,6 +190,7 @@
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpToolStripMenuItem1,
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
@@ -408,9 +414,9 @@
             // 
             // btnDrinkAdd
             // 
-            this.btnDrinkAdd.Location = new System.Drawing.Point(30, 57);
+            this.btnDrinkAdd.Location = new System.Drawing.Point(6, 107);
             this.btnDrinkAdd.Name = "btnDrinkAdd";
-            this.btnDrinkAdd.Size = new System.Drawing.Size(118, 23);
+            this.btnDrinkAdd.Size = new System.Drawing.Size(76, 23);
             this.btnDrinkAdd.TabIndex = 4;
             this.btnDrinkAdd.Text = "Add to Order";
             this.btnDrinkAdd.UseVisualStyleBackColor = true;
@@ -418,9 +424,9 @@
             // 
             // btnDrinkClear
             // 
-            this.btnDrinkClear.Location = new System.Drawing.Point(30, 94);
+            this.btnDrinkClear.Location = new System.Drawing.Point(88, 107);
             this.btnDrinkClear.Name = "btnDrinkClear";
-            this.btnDrinkClear.Size = new System.Drawing.Size(118, 23);
+            this.btnDrinkClear.Size = new System.Drawing.Size(73, 23);
             this.btnDrinkClear.TabIndex = 5;
             this.btnDrinkClear.Text = "Clear Drink";
             this.btnDrinkClear.UseVisualStyleBackColor = true;
@@ -428,6 +434,10 @@
             // 
             // grpDrinkInfo
             // 
+            this.grpDrinkInfo.Controls.Add(this.tbxDrinkTotal);
+            this.grpDrinkInfo.Controls.Add(this.lblDrinkTotal);
+            this.grpDrinkInfo.Controls.Add(this.tbxDrinkQuantity);
+            this.grpDrinkInfo.Controls.Add(this.lblDrinkQuantity);
             this.grpDrinkInfo.Controls.Add(this.tbxDrinkPrice);
             this.grpDrinkInfo.Controls.Add(this.lblDrinkPrice);
             this.grpDrinkInfo.Controls.Add(this.btnDrinkAdd);
@@ -438,6 +448,40 @@
             this.grpDrinkInfo.TabIndex = 6;
             this.grpDrinkInfo.TabStop = false;
             this.grpDrinkInfo.Text = "Current Drink";
+            // 
+            // tbxDrinkTotal
+            // 
+            this.tbxDrinkTotal.Location = new System.Drawing.Point(63, 74);
+            this.tbxDrinkTotal.Name = "tbxDrinkTotal";
+            this.tbxDrinkTotal.ReadOnly = true;
+            this.tbxDrinkTotal.Size = new System.Drawing.Size(85, 20);
+            this.tbxDrinkTotal.TabIndex = 9;
+            // 
+            // lblDrinkTotal
+            // 
+            this.lblDrinkTotal.AutoSize = true;
+            this.lblDrinkTotal.Location = new System.Drawing.Point(26, 77);
+            this.lblDrinkTotal.Name = "lblDrinkTotal";
+            this.lblDrinkTotal.Size = new System.Drawing.Size(31, 13);
+            this.lblDrinkTotal.TabIndex = 8;
+            this.lblDrinkTotal.Text = "Total";
+            // 
+            // tbxDrinkQuantity
+            // 
+            this.tbxDrinkQuantity.Location = new System.Drawing.Point(63, 48);
+            this.tbxDrinkQuantity.Name = "tbxDrinkQuantity";
+            this.tbxDrinkQuantity.Size = new System.Drawing.Size(85, 20);
+            this.tbxDrinkQuantity.TabIndex = 7;
+            this.tbxDrinkQuantity.TextChanged += new System.EventHandler(this.tbxDrinkQuantity_TextChanged);
+            // 
+            // lblDrinkQuantity
+            // 
+            this.lblDrinkQuantity.AutoSize = true;
+            this.lblDrinkQuantity.Location = new System.Drawing.Point(12, 51);
+            this.lblDrinkQuantity.Name = "lblDrinkQuantity";
+            this.lblDrinkQuantity.Size = new System.Drawing.Size(46, 13);
+            this.lblDrinkQuantity.TabIndex = 6;
+            this.lblDrinkQuantity.Text = "Quantity";
             // 
             // tbxDrinkPrice
             // 
@@ -450,7 +494,7 @@
             // lblDrinkPrice
             // 
             this.lblDrinkPrice.AutoSize = true;
-            this.lblDrinkPrice.Location = new System.Drawing.Point(27, 21);
+            this.lblDrinkPrice.Location = new System.Drawing.Point(26, 24);
             this.lblDrinkPrice.Name = "lblDrinkPrice";
             this.lblDrinkPrice.Size = new System.Drawing.Size(31, 13);
             this.lblDrinkPrice.TabIndex = 0;
@@ -524,6 +568,13 @@
             this.lblOrderItems.Size = new System.Drawing.Size(51, 13);
             this.lblOrderItems.TabIndex = 0;
             this.lblOrderItems.Text = "Drink Qty";
+            // 
+            // helpToolStripMenuItem1
+            // 
+            this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.helpToolStripMenuItem1.Text = "Help";
+            this.helpToolStripMenuItem1.Click += new System.EventHandler(this.helpToolStripMenuItem1_Click);
             // 
             // uiMain
             // 
@@ -608,6 +659,11 @@
         private System.Windows.Forms.Button btnOrderSubmit;
         private System.Windows.Forms.Button btnOrderClear;
         private System.Windows.Forms.ToolStripMenuItem clearDrinkToolStripMenuItem;
+        private System.Windows.Forms.TextBox tbxDrinkTotal;
+        private System.Windows.Forms.Label lblDrinkTotal;
+        private System.Windows.Forms.TextBox tbxDrinkQuantity;
+        private System.Windows.Forms.Label lblDrinkQuantity;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
     }
 }
 

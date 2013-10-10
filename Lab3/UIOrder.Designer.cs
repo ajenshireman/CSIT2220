@@ -41,6 +41,7 @@
             this.fontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpDrinkType = new System.Windows.Forms.GroupBox();
             this.rbtTypeNone = new System.Windows.Forms.RadioButton();
@@ -53,9 +54,9 @@
             this.rbtTypeFruit = new System.Windows.Forms.RadioButton();
             this.grpSize = new System.Windows.Forms.GroupBox();
             this.rbtSizeNone = new System.Windows.Forms.RadioButton();
-            this.rbtSize20 = new System.Windows.Forms.RadioButton();
-            this.rbtSize16 = new System.Windows.Forms.RadioButton();
-            this.rbtSize12 = new System.Windows.Forms.RadioButton();
+            this.rbtSizeLarge = new System.Windows.Forms.RadioButton();
+            this.rbtSizeMedium = new System.Windows.Forms.RadioButton();
+            this.rbtSizeSmall = new System.Windows.Forms.RadioButton();
             this.grpAdditives = new System.Windows.Forms.GroupBox();
             this.cbxAddCoolDownRemedey = new System.Windows.Forms.CheckBox();
             this.cbxAddEnergyBooster = new System.Windows.Forms.CheckBox();
@@ -78,7 +79,9 @@
             this.tbxOrderItems = new System.Windows.Forms.TextBox();
             this.lblOrderTotal = new System.Windows.Forms.Label();
             this.lblOrderItems = new System.Windows.Forms.Label();
-            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblSizeSmall = new System.Windows.Forms.Label();
+            this.lblSizeMedium = new System.Windows.Forms.Label();
+            this.lblSizeLarge = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.grpDrinkType.SuspendLayout();
             this.grpSmoothie.SuspendLayout();
@@ -196,6 +199,13 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
+            // helpToolStripMenuItem1
+            // 
+            this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(107, 22);
+            this.helpToolStripMenuItem1.Text = "Help";
+            this.helpToolStripMenuItem1.Click += new System.EventHandler(this.helpToolStripMenuItem1_Click);
+            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
@@ -309,10 +319,13 @@
             // 
             // grpSize
             // 
+            this.grpSize.Controls.Add(this.lblSizeLarge);
+            this.grpSize.Controls.Add(this.lblSizeMedium);
+            this.grpSize.Controls.Add(this.lblSizeSmall);
             this.grpSize.Controls.Add(this.rbtSizeNone);
-            this.grpSize.Controls.Add(this.rbtSize20);
-            this.grpSize.Controls.Add(this.rbtSize16);
-            this.grpSize.Controls.Add(this.rbtSize12);
+            this.grpSize.Controls.Add(this.rbtSizeLarge);
+            this.grpSize.Controls.Add(this.rbtSizeMedium);
+            this.grpSize.Controls.Add(this.rbtSizeSmall);
             this.grpSize.Location = new System.Drawing.Point(14, 184);
             this.grpSize.Name = "grpSize";
             this.grpSize.Size = new System.Drawing.Size(158, 105);
@@ -325,7 +338,7 @@
             this.rbtSizeNone.AutoCheck = false;
             this.rbtSizeNone.AutoSize = true;
             this.rbtSizeNone.Checked = true;
-            this.rbtSizeNone.Location = new System.Drawing.Point(76, 19);
+            this.rbtSizeNone.Location = new System.Drawing.Point(16, 83);
             this.rbtSizeNone.Name = "rbtSizeNone";
             this.rbtSizeNone.Size = new System.Drawing.Size(62, 17);
             this.rbtSizeNone.TabIndex = 3;
@@ -334,38 +347,38 @@
             this.rbtSizeNone.UseVisualStyleBackColor = true;
             this.rbtSizeNone.Visible = false;
             // 
-            // rbtSize20
+            // rbtSizeLarge
             // 
-            this.rbtSize20.AutoCheck = false;
-            this.rbtSize20.AutoSize = true;
-            this.rbtSize20.Location = new System.Drawing.Point(16, 65);
-            this.rbtSize20.Name = "rbtSize20";
-            this.rbtSize20.Size = new System.Drawing.Size(54, 17);
-            this.rbtSize20.TabIndex = 2;
-            this.rbtSize20.Text = "20 oz.";
-            this.rbtSize20.UseVisualStyleBackColor = true;
+            this.rbtSizeLarge.AutoCheck = false;
+            this.rbtSizeLarge.AutoSize = true;
+            this.rbtSizeLarge.Location = new System.Drawing.Point(16, 65);
+            this.rbtSizeLarge.Name = "rbtSizeLarge";
+            this.rbtSizeLarge.Size = new System.Drawing.Size(54, 17);
+            this.rbtSizeLarge.TabIndex = 2;
+            this.rbtSizeLarge.Text = "20 oz.";
+            this.rbtSizeLarge.UseVisualStyleBackColor = true;
             // 
-            // rbtSize16
+            // rbtSizeMedium
             // 
-            this.rbtSize16.AutoCheck = false;
-            this.rbtSize16.AutoSize = true;
-            this.rbtSize16.Location = new System.Drawing.Point(16, 42);
-            this.rbtSize16.Name = "rbtSize16";
-            this.rbtSize16.Size = new System.Drawing.Size(54, 17);
-            this.rbtSize16.TabIndex = 1;
-            this.rbtSize16.Text = "16 oz.";
-            this.rbtSize16.UseVisualStyleBackColor = true;
+            this.rbtSizeMedium.AutoCheck = false;
+            this.rbtSizeMedium.AutoSize = true;
+            this.rbtSizeMedium.Location = new System.Drawing.Point(16, 42);
+            this.rbtSizeMedium.Name = "rbtSizeMedium";
+            this.rbtSizeMedium.Size = new System.Drawing.Size(54, 17);
+            this.rbtSizeMedium.TabIndex = 1;
+            this.rbtSizeMedium.Text = "16 oz.";
+            this.rbtSizeMedium.UseVisualStyleBackColor = true;
             // 
-            // rbtSize12
+            // rbtSizeSmall
             // 
-            this.rbtSize12.AutoCheck = false;
-            this.rbtSize12.AutoSize = true;
-            this.rbtSize12.Location = new System.Drawing.Point(16, 19);
-            this.rbtSize12.Name = "rbtSize12";
-            this.rbtSize12.Size = new System.Drawing.Size(54, 17);
-            this.rbtSize12.TabIndex = 0;
-            this.rbtSize12.Text = "12 oz.";
-            this.rbtSize12.UseVisualStyleBackColor = true;
+            this.rbtSizeSmall.AutoCheck = false;
+            this.rbtSizeSmall.AutoSize = true;
+            this.rbtSizeSmall.Location = new System.Drawing.Point(16, 19);
+            this.rbtSizeSmall.Name = "rbtSizeSmall";
+            this.rbtSizeSmall.Size = new System.Drawing.Size(54, 17);
+            this.rbtSizeSmall.TabIndex = 0;
+            this.rbtSizeSmall.Text = "12 oz.";
+            this.rbtSizeSmall.UseVisualStyleBackColor = true;
             // 
             // grpAdditives
             // 
@@ -569,12 +582,32 @@
             this.lblOrderItems.TabIndex = 0;
             this.lblOrderItems.Text = "Drink Qty";
             // 
-            // helpToolStripMenuItem1
+            // lblSizeSmall
             // 
-            this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.helpToolStripMenuItem1.Text = "Help";
-            this.helpToolStripMenuItem1.Click += new System.EventHandler(this.helpToolStripMenuItem1_Click);
+            this.lblSizeSmall.AutoSize = true;
+            this.lblSizeSmall.Location = new System.Drawing.Point(76, 21);
+            this.lblSizeSmall.Name = "lblSizeSmall";
+            this.lblSizeSmall.Size = new System.Drawing.Size(34, 13);
+            this.lblSizeSmall.TabIndex = 4;
+            this.lblSizeSmall.Text = "$3.00";
+            // 
+            // lblSizeMedium
+            // 
+            this.lblSizeMedium.AutoSize = true;
+            this.lblSizeMedium.Location = new System.Drawing.Point(76, 44);
+            this.lblSizeMedium.Name = "lblSizeMedium";
+            this.lblSizeMedium.Size = new System.Drawing.Size(34, 13);
+            this.lblSizeMedium.TabIndex = 5;
+            this.lblSizeMedium.Text = "$3.50";
+            // 
+            // lblSizeLarge
+            // 
+            this.lblSizeLarge.AutoSize = true;
+            this.lblSizeLarge.Location = new System.Drawing.Point(76, 67);
+            this.lblSizeLarge.Name = "lblSizeLarge";
+            this.lblSizeLarge.Size = new System.Drawing.Size(34, 13);
+            this.lblSizeLarge.TabIndex = 6;
+            this.lblSizeLarge.Text = "$4.00";
             // 
             // uiMain
             // 
@@ -634,9 +667,9 @@
         private System.Windows.Forms.RadioButton rbtTypeFruit;
         private System.Windows.Forms.GroupBox grpSize;
         private System.Windows.Forms.RadioButton rbtSizeNone;
-        private System.Windows.Forms.RadioButton rbtSize20;
-        private System.Windows.Forms.RadioButton rbtSize16;
-        private System.Windows.Forms.RadioButton rbtSize12;
+        private System.Windows.Forms.RadioButton rbtSizeLarge;
+        private System.Windows.Forms.RadioButton rbtSizeMedium;
+        private System.Windows.Forms.RadioButton rbtSizeSmall;
         private System.Windows.Forms.GroupBox grpAdditives;
         private System.Windows.Forms.CheckBox cbxAddCoolDownRemedey;
         private System.Windows.Forms.CheckBox cbxAddEnergyBooster;
@@ -664,6 +697,9 @@
         private System.Windows.Forms.TextBox tbxDrinkQuantity;
         private System.Windows.Forms.Label lblDrinkQuantity;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
+        private System.Windows.Forms.Label lblSizeLarge;
+        private System.Windows.Forms.Label lblSizeMedium;
+        private System.Windows.Forms.Label lblSizeSmall;
     }
 }
 

@@ -32,12 +32,13 @@ namespace CSIT2220_Lab3
         private List<Additive> additiveList;
 
         /* Variable Declarations */
-        private Day currentDay;
+        private Day   currentDay;
         private Order currentOrder;
         private Drink currentDrink;
-        private int drinkQuantity;
+        private int   drinkQuantity;
         /* End Variable Declarations */
 
+        /*Constructor */
         public uiMain()
         {
             InitializeComponent();
@@ -45,11 +46,13 @@ namespace CSIT2220_Lab3
         }
 
         #region ConstructorMethods
+        // Do all the initial setup stuff
         private void startup () {
             InitializeDrinkTypeRadioButtons();
             InitializeDrinkSizeRadioButtons();
             InitializeAdditives();
-            currentDay = new Day();
+            InitializeDrinkSizes();
+            currentDay   = new Day();
             currentOrder = new Order();
             currentDrink = new Drink();
             updateDrinkQuantity(DEFAULT_DRINK_QUANTITY);
@@ -82,9 +85,9 @@ namespace CSIT2220_Lab3
         {
             this.drinkSizeRadioButtons = new List<RadioButton>();
             this.drinkSizeRadioButtons.Add(this.rbtSizeNone);
-            this.drinkSizeRadioButtons.Add(this.rbtSize12);
-            this.drinkSizeRadioButtons.Add(this.rbtSize16);
-            this.drinkSizeRadioButtons.Add(this.rbtSize20);
+            this.drinkSizeRadioButtons.Add(this.rbtSizeSmall);
+            this.drinkSizeRadioButtons.Add(this.rbtSizeMedium);
+            this.drinkSizeRadioButtons.Add(this.rbtSizeLarge);
 
             // Add the event handler to the radio buttons.
             foreach ( RadioButton r in drinkSizeRadioButtons )
@@ -99,6 +102,17 @@ namespace CSIT2220_Lab3
         private void InitializeAdditives ()
         {
             additiveList = Additive.getAdditiveList();
+        }
+
+        // Set the drink size radio button and lable text
+        private void InitializeDrinkSizes ()
+        {
+            rbtSizeSmall.Text  = Drink.SIZE_SMALL.ToString()  + " oz.";
+            rbtSizeMedium.Text = Drink.SIZE_MEDIUM.ToString() + " oz.";
+            rbtSizeLarge.Text  = Drink.SIZE_LARGE.ToString()  + " oz.";
+            lblSizeSmall.Text  = Drink.PRICE_SMALL.ToString("c");
+            lblSizeMedium.Text = Drink.PRICE_MEDIUM.ToString("c");
+            lblSizeLarge.Text  = Drink.PRICE_LARGE.ToString("c");
         }
         #endregion
 
@@ -281,8 +295,8 @@ namespace CSIT2220_Lab3
             updateDrinkQuantity(DEFAULT_DRINK_QUANTITY);
             setDrinkSize(rbtSizeNone);
             setDrinkType(rbtTypeNone);
-            cbxAddVitaminPack.Checked = false;
-            cbxAddEnergyBooster.Checked = false;
+            cbxAddVitaminPack.Checked     = false;
+            cbxAddEnergyBooster.Checked   = false;
             cbxAddCoolDownRemedey.Checked = false;
             updateDrink();
         }
@@ -328,7 +342,7 @@ namespace CSIT2220_Lab3
             Summary s = currentOrder.getSummaryBasic();
 
             // Print number of drinks and order total
-            tbxOrderItems.Text = s.drinks.ToString();
+            tbxOrderItems.Text  = s.drinks.ToString();
             tbxOrdertTotal.Text = s.sales.ToString("c");
         }
 
@@ -400,15 +414,15 @@ namespace CSIT2220_Lab3
 
             try
             {
-                if ( selection == rbtSize12 )
+                if ( selection == rbtSizeSmall )
                 {
                     currentDrink.setSize(1);
                 }
-                else if ( selection == rbtSize16 )
+                else if ( selection == rbtSizeMedium )
                 {
                     currentDrink.setSize(2);
                 }
-                else if ( selection == rbtSize20 )
+                else if ( selection == rbtSizeLarge )
                 {
                     currentDrink.setSize(3);
                 }

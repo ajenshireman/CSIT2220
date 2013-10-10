@@ -19,12 +19,21 @@ namespace CSIT2220_Lab3
     class Drink
     {
         /* Constants */
+        // Drink Types
         public const int NONE             = 0;
         public const int FRUIT            = 1;
         public const int VEGETABLE        = 2;
         public const int POMEGRANATE      = 3;
         public const int STRAWBERRYBANANA = 4;
         public const int WHEATBERRY       = 5;
+        // Drink Prices
+        public const decimal PRICE_SMALL  = 3.00m;
+        public const decimal PRICE_MEDIUM = 3.50m;
+        public const decimal PRICE_LARGE  = 4.00m;
+        // Drink Sizes
+        public const int     SIZE_SMALL   = 12;
+        public const int     SIZE_MEDIUM  = 16;
+        public const int     SIZE_LARGE   = 20;
         /* Variable Declarations */
         private int type;                   // Type of drink
         private int size;                   // Size of drink
@@ -96,15 +105,15 @@ namespace CSIT2220_Lab3
             // Look trough list of drinks and add price 
             if ( size == 1 )
             {
-                price = 3.00m;
+                price = PRICE_SMALL;
             }
             else if ( size == 2 )
             {
-                price = 3.50m;
+                price = PRICE_MEDIUM;
             }
             else if ( size == 3 )
             {
-                price = 4.00m;
+                price = PRICE_LARGE;
             }
             // Look through additives and add price
             foreach ( Additive a in additives )

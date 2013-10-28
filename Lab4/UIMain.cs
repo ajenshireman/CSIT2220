@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -12,11 +11,14 @@ namespace CSIT2220_Lab4
     public partial class UIMain : Form
     {
         AboutForm about;
+        List<String> items;
 
         public UIMain ()
         {
             InitializeComponent();
             about = new AboutForm();
+            items = new List<string>();
+            lbxItems.DataSource = items;
         }
 
         private void btnClose_Click ( object sender, EventArgs e )
@@ -39,21 +41,22 @@ namespace CSIT2220_Lab4
             }
             else if ( !itemFound(newItem, lbxItems) )
             {
-                lbxItems.Items.Add(newItem);
+                items.Add(newItem);
             }
             else
             {
                 MessageBox.Show("Item is already in the list");
             }
 
+            refreshItems();
             tbx_newItem.Clear();
             tbx_newItem.Focus();
         }
 
         public bool itemFound ( string item, ListBox list ) {
-            for ( int i = 0; i < list.Items.Count; i++ )
+            for ( int i = 0; i < items.Count; i++ )
             {
-                if ( (string)list.Items[i] == item )
+                if ( items[i] == item )
                 {
                     return true;
                 }
@@ -66,8 +69,10 @@ namespace CSIT2220_Lab4
         {
             if ( MessageBox.Show("This will clear all items in the ListBox!", "", MessageBoxButtons.OKCancel) == DialogResult.OK )
             {
-                lbxItems.Items.Clear();
+                items.Clear();
             }
+
+            refreshItems();
         }
 
         private void btnRemove_Click ( object sender, EventArgs e )
@@ -78,8 +83,17 @@ namespace CSIT2220_Lab4
             }
             else if ( MessageBox.Show("This will remove the selecter item form the ListBox!", "", MessageBoxButtons.OKCancel) == DialogResult.OK )
             {
-                lbxItems.Items.RemoveAt(lbxItems.SelectedIndex);
+                items.Remove(lbxItems.Items[lbxItems.SelectedIndex].ToString());
             }
+
+            refreshItems();
+        }
+
+        private void refreshItems ()
+        {
+            lbxItems.DataSource = null;
+            lbxItems.DataSource = items;
+            lbxItems.Refresh();
         }
 
         private void btnCount_Click ( object sender, EventArgs e )

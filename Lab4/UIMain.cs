@@ -32,7 +32,7 @@ namespace CSIT2220_Lab4
             about.ShowDialog();
         }
 
-        private void btnAdd_Click ( object sender, EventArgs e )
+        private void btnAddItem_Click ( object sender, EventArgs e )
         {
             string newItem = tbx_newItem.Text;
 
@@ -66,7 +66,7 @@ namespace CSIT2220_Lab4
             return false;
         }
 
-        private void btnClearlbxItems_Click ( object sender, EventArgs e )
+        private void btnClearItems_Click ( object sender, EventArgs e )
         {
             if ( MessageBox.Show("This will clear all items in the ListBox!", "", MessageBoxButtons.OKCancel) == DialogResult.OK )
             {
@@ -76,7 +76,7 @@ namespace CSIT2220_Lab4
             refreshItems();
         }
 
-        private void btnRemove_Click ( object sender, EventArgs e )
+        private void btnRemoveItem_Click ( object sender, EventArgs e )
         {
             if ( lbxItems.SelectedIndex == -1 )
             {
@@ -97,7 +97,7 @@ namespace CSIT2220_Lab4
             lbxItems.Refresh();
         }
 
-        private void btnCount_Click ( object sender, EventArgs e )
+        private void btnCountItems_Click ( object sender, EventArgs e )
         {
             MessageBox.Show("Items: " + lbxItems.Items.Count);
         }

@@ -31,11 +31,13 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnAbout = new System.Windows.Forms.Button();
             this.tbx_newItem = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnClearlbxItems = new System.Windows.Forms.Button();
+            this.btnAddItem = new System.Windows.Forms.Button();
+            this.btnClearItems = new System.Windows.Forms.Button();
             this.lbxItems = new System.Windows.Forms.ListBox();
-            this.btnRemove = new System.Windows.Forms.Button();
-            this.btnCount = new System.Windows.Forms.Button();
+            this.btnRemoveItem = new System.Windows.Forms.Button();
+            this.btnCountItems = new System.Windows.Forms.Button();
+            this.grpManageItems = new System.Windows.Forms.GroupBox();
+            this.grpManageItems.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClose
@@ -60,78 +62,89 @@
             // 
             // tbx_newItem
             // 
-            this.tbx_newItem.Location = new System.Drawing.Point(13, 41);
+            this.tbx_newItem.Location = new System.Drawing.Point(6, 16);
             this.tbx_newItem.Name = "tbx_newItem";
             this.tbx_newItem.Size = new System.Drawing.Size(121, 20);
             this.tbx_newItem.TabIndex = 3;
             // 
-            // btnAdd
+            // btnAddItem
             // 
-            this.btnAdd.Location = new System.Drawing.Point(59, 67);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAddItem.Location = new System.Drawing.Point(52, 42);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.Size = new System.Drawing.Size(75, 23);
+            this.btnAddItem.TabIndex = 4;
+            this.btnAddItem.Text = "Add";
+            this.btnAddItem.UseVisualStyleBackColor = true;
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
-            // btnClearlbxItems
+            // btnClearItems
             // 
-            this.btnClearlbxItems.Location = new System.Drawing.Point(59, 126);
-            this.btnClearlbxItems.Name = "btnClearlbxItems";
-            this.btnClearlbxItems.Size = new System.Drawing.Size(75, 23);
-            this.btnClearlbxItems.TabIndex = 5;
-            this.btnClearlbxItems.Text = "Clear";
-            this.btnClearlbxItems.UseVisualStyleBackColor = true;
-            this.btnClearlbxItems.Click += new System.EventHandler(this.btnClearlbxItems_Click);
+            this.btnClearItems.Location = new System.Drawing.Point(52, 101);
+            this.btnClearItems.Name = "btnClearItems";
+            this.btnClearItems.Size = new System.Drawing.Size(75, 23);
+            this.btnClearItems.TabIndex = 5;
+            this.btnClearItems.Text = "Clear";
+            this.btnClearItems.UseVisualStyleBackColor = true;
+            this.btnClearItems.Click += new System.EventHandler(this.btnClearItems_Click);
             // 
             // lbxItems
             // 
             this.lbxItems.FormattingEnabled = true;
-            this.lbxItems.Location = new System.Drawing.Point(140, 41);
+            this.lbxItems.Location = new System.Drawing.Point(133, 16);
             this.lbxItems.Name = "lbxItems";
             this.lbxItems.Size = new System.Drawing.Size(120, 147);
             this.lbxItems.Sorted = true;
             this.lbxItems.TabIndex = 6;
             // 
-            // btnRemove
+            // btnRemoveItem
             // 
-            this.btnRemove.Location = new System.Drawing.Point(59, 97);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(75, 23);
-            this.btnRemove.TabIndex = 7;
-            this.btnRemove.Text = "Remove";
-            this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            this.btnRemoveItem.Location = new System.Drawing.Point(52, 72);
+            this.btnRemoveItem.Name = "btnRemoveItem";
+            this.btnRemoveItem.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoveItem.TabIndex = 7;
+            this.btnRemoveItem.Text = "Remove";
+            this.btnRemoveItem.UseVisualStyleBackColor = true;
+            this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
             // 
-            // btnCount
+            // btnCountItems
             // 
-            this.btnCount.Location = new System.Drawing.Point(59, 156);
-            this.btnCount.Name = "btnCount";
-            this.btnCount.Size = new System.Drawing.Size(75, 23);
-            this.btnCount.TabIndex = 8;
-            this.btnCount.Text = "Count";
-            this.btnCount.UseVisualStyleBackColor = true;
-            this.btnCount.Click += new System.EventHandler(this.btnCount_Click);
+            this.btnCountItems.Location = new System.Drawing.Point(52, 131);
+            this.btnCountItems.Name = "btnCountItems";
+            this.btnCountItems.Size = new System.Drawing.Size(75, 23);
+            this.btnCountItems.TabIndex = 8;
+            this.btnCountItems.Text = "Count";
+            this.btnCountItems.UseVisualStyleBackColor = true;
+            this.btnCountItems.Click += new System.EventHandler(this.btnClearItems_Click);
+            // 
+            // grpManageItems
+            // 
+            this.grpManageItems.Controls.Add(this.btnCountItems);
+            this.grpManageItems.Controls.Add(this.btnRemoveItem);
+            this.grpManageItems.Controls.Add(this.lbxItems);
+            this.grpManageItems.Controls.Add(this.btnClearItems);
+            this.grpManageItems.Controls.Add(this.btnAddItem);
+            this.grpManageItems.Controls.Add(this.tbx_newItem);
+            this.grpManageItems.Location = new System.Drawing.Point(7, 25);
+            this.grpManageItems.Name = "grpManageItems";
+            this.grpManageItems.Size = new System.Drawing.Size(266, 191);
+            this.grpManageItems.TabIndex = 9;
+            this.grpManageItems.TabStop = false;
+            this.grpManageItems.Text = "Manage Items";
             // 
             // UIMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.btnCount);
-            this.Controls.Add(this.btnRemove);
-            this.Controls.Add(this.lbxItems);
-            this.Controls.Add(this.btnClearlbxItems);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.tbx_newItem);
+            this.Controls.Add(this.grpManageItems);
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnClose);
             this.Name = "UIMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.grpManageItems.ResumeLayout(false);
+            this.grpManageItems.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -140,11 +153,12 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnAbout;
         private System.Windows.Forms.TextBox tbx_newItem;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnClearlbxItems;
+        private System.Windows.Forms.Button btnAddItem;
+        private System.Windows.Forms.Button btnClearItems;
         private System.Windows.Forms.ListBox lbxItems;
-        private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.Button btnCount;
+        private System.Windows.Forms.Button btnRemoveItem;
+        private System.Windows.Forms.Button btnCountItems;
+        private System.Windows.Forms.GroupBox grpManageItems;
     }
 }
 

@@ -40,11 +40,11 @@
             this.grpManageItems = new System.Windows.Forms.GroupBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.grpSelectCoffeeFlavor = new System.Windows.Forms.GroupBox();
+            this.lbxSyrupFlavors = new System.Windows.Forms.ListBox();
+            this.lblSyrupFlavors = new System.Windows.Forms.Label();
             this.btnClearDrink = new System.Windows.Forms.Button();
             this.cboCoffeeFlavor = new System.Windows.Forms.ComboBox();
             this.lblCoffeeFlavor = new System.Windows.Forms.Label();
-            this.lblSyrupFlavors = new System.Windows.Forms.Label();
-            this.lbxSyrupFlavors = new System.Windows.Forms.ListBox();
             this.grpManageItems.SuspendLayout();
             this.grpSelectCoffeeFlavor.SuspendLayout();
             this.SuspendLayout();
@@ -138,7 +138,7 @@
             this.grpManageItems.Size = new System.Drawing.Size(266, 191);
             this.grpManageItems.TabIndex = 9;
             this.grpManageItems.TabStop = false;
-            this.grpManageItems.Text = "Manage Items";
+            this.grpManageItems.Text = "Manage Coffee Flavors";
             // 
             // notifyIcon1
             // 
@@ -158,6 +158,23 @@
             this.grpSelectCoffeeFlavor.TabIndex = 10;
             this.grpSelectCoffeeFlavor.TabStop = false;
             this.grpSelectCoffeeFlavor.Text = "Select Coffee Flavor";
+            // 
+            // lbxSyrupFlavors
+            // 
+            this.lbxSyrupFlavors.FormattingEnabled = true;
+            this.lbxSyrupFlavors.Location = new System.Drawing.Point(82, 47);
+            this.lbxSyrupFlavors.Name = "lbxSyrupFlavors";
+            this.lbxSyrupFlavors.Size = new System.Drawing.Size(121, 147);
+            this.lbxSyrupFlavors.TabIndex = 4;
+            // 
+            // lblSyrupFlavors
+            // 
+            this.lblSyrupFlavors.AutoSize = true;
+            this.lblSyrupFlavors.Location = new System.Drawing.Point(6, 47);
+            this.lblSyrupFlavors.Name = "lblSyrupFlavors";
+            this.lblSyrupFlavors.Size = new System.Drawing.Size(71, 13);
+            this.lblSyrupFlavors.TabIndex = 3;
+            this.lblSyrupFlavors.Text = "Syrup Flavors";
             // 
             // btnClearDrink
             // 
@@ -186,23 +203,6 @@
             this.lblCoffeeFlavor.TabIndex = 0;
             this.lblCoffeeFlavor.Text = "Coffee Flavor";
             // 
-            // lblSyrupFlavors
-            // 
-            this.lblSyrupFlavors.AutoSize = true;
-            this.lblSyrupFlavors.Location = new System.Drawing.Point(6, 47);
-            this.lblSyrupFlavors.Name = "lblSyrupFlavors";
-            this.lblSyrupFlavors.Size = new System.Drawing.Size(71, 13);
-            this.lblSyrupFlavors.TabIndex = 3;
-            this.lblSyrupFlavors.Text = "Syrup Flavors";
-            // 
-            // lbxSyrupFlavors
-            // 
-            this.lbxSyrupFlavors.FormattingEnabled = true;
-            this.lbxSyrupFlavors.Location = new System.Drawing.Point(82, 47);
-            this.lbxSyrupFlavors.Name = "lbxSyrupFlavors";
-            this.lbxSyrupFlavors.Size = new System.Drawing.Size(121, 147);
-            this.lbxSyrupFlavors.TabIndex = 4;
-            // 
             // UIMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,7 +214,7 @@
             this.Controls.Add(this.btnClose);
             this.Name = "UIMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "PSCC Coffee Shop";
             this.grpManageItems.ResumeLayout(false);
             this.grpManageItems.PerformLayout();
             this.grpSelectCoffeeFlavor.ResumeLayout(false);

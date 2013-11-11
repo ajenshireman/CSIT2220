@@ -16,7 +16,7 @@ namespace CSIT2220_Lab4
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             SplashForm splash = new SplashForm();
-            //splash.ShowDialog();
+            splash.ShowDialog();
             Application.Run(new UIMain());
         }
     }

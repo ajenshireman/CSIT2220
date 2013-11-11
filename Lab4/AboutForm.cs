@@ -14,7 +14,7 @@ namespace CSIT2220_Lab4
         public AboutForm ()
         {
             InitializeComponent();
-            string msg = "CSIT 2220 Lab 3\n" + 
+            string msg = "CSIT 2220 Lab 4\n" + 
                          "Author: Ajen Shireman\n" +
                          "v1.0 2013-10-07";
             lblAbout.Text = msg;

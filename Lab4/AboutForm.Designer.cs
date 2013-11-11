@@ -58,6 +58,7 @@
             this.Controls.Add(this.lblAbout);
             this.Controls.Add(this.btnOK);
             this.Name = "AboutForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "About";
             this.ResumeLayout(false);
 

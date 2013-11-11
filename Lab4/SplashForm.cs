@@ -14,6 +14,7 @@ namespace CSIT2220_Lab4
         public SplashForm ()
         {
             InitializeComponent();
+            label1.Text = "CSIT 2220 Lab 4";
             timer1.Start();
         }
 

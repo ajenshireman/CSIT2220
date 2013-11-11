@@ -128,6 +128,7 @@
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnClose);
             this.Name = "UIMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

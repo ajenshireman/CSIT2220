@@ -20,6 +20,7 @@ namespace CSIT2220_Lab4
             about = new AboutForm();
             items = new List<string>();
             lbxItems.DataSource = items;
+            cboCoffeeFlavor.DataSource = items;
         }
 
         private void btnClose_Click ( object sender, EventArgs e )
@@ -95,11 +96,19 @@ namespace CSIT2220_Lab4
             lbxItems.DataSource = null;
             lbxItems.DataSource = items;
             lbxItems.Refresh();
+            cboCoffeeFlavor.DataSource = null;
+            cboCoffeeFlavor.DataSource = items;
+            cboCoffeeFlavor.Refresh();
         }
 
         private void btnCountItems_Click ( object sender, EventArgs e )
         {
             MessageBox.Show("Items: " + lbxItems.Items.Count);
+        }
+
+        private void btnClearDrink_Click ( object sender, EventArgs e )
+        {
+            cboCoffeeFlavor.SelectedIndex = -1;
         }
 
     }

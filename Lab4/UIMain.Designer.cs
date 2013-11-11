@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent ()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnAbout = new System.Windows.Forms.Button();
             this.tbx_newItem = new System.Windows.Forms.TextBox();
@@ -37,7 +38,13 @@
             this.btnRemoveItem = new System.Windows.Forms.Button();
             this.btnCountItems = new System.Windows.Forms.Button();
             this.grpManageItems = new System.Windows.Forms.GroupBox();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.grpSelectCoffeeFlavor = new System.Windows.Forms.GroupBox();
+            this.lblCoffeeFlavor = new System.Windows.Forms.Label();
+            this.cboCoffeeFlavor = new System.Windows.Forms.ComboBox();
+            this.btnClearDrink = new System.Windows.Forms.Button();
             this.grpManageItems.SuspendLayout();
+            this.grpSelectCoffeeFlavor.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClose
@@ -131,11 +138,56 @@
             this.grpManageItems.TabStop = false;
             this.grpManageItems.Text = "Manage Items";
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "gr";
+            this.notifyIcon1.Visible = true;
+            // 
+            // grpSelectCoffeeFlavor
+            // 
+            this.grpSelectCoffeeFlavor.Controls.Add(this.btnClearDrink);
+            this.grpSelectCoffeeFlavor.Controls.Add(this.cboCoffeeFlavor);
+            this.grpSelectCoffeeFlavor.Controls.Add(this.lblCoffeeFlavor);
+            this.grpSelectCoffeeFlavor.Location = new System.Drawing.Point(279, 25);
+            this.grpSelectCoffeeFlavor.Name = "grpSelectCoffeeFlavor";
+            this.grpSelectCoffeeFlavor.Size = new System.Drawing.Size(214, 234);
+            this.grpSelectCoffeeFlavor.TabIndex = 10;
+            this.grpSelectCoffeeFlavor.TabStop = false;
+            this.grpSelectCoffeeFlavor.Text = "Select Coffee Flavor";
+            // 
+            // lblCoffeeFlavor
+            // 
+            this.lblCoffeeFlavor.AutoSize = true;
+            this.lblCoffeeFlavor.Location = new System.Drawing.Point(6, 19);
+            this.lblCoffeeFlavor.Name = "lblCoffeeFlavor";
+            this.lblCoffeeFlavor.Size = new System.Drawing.Size(70, 13);
+            this.lblCoffeeFlavor.TabIndex = 0;
+            this.lblCoffeeFlavor.Text = "Coffee Flavor";
+            // 
+            // cboCoffeeFlavor
+            // 
+            this.cboCoffeeFlavor.FormattingEnabled = true;
+            this.cboCoffeeFlavor.Location = new System.Drawing.Point(82, 16);
+            this.cboCoffeeFlavor.Name = "cboCoffeeFlavor";
+            this.cboCoffeeFlavor.Size = new System.Drawing.Size(121, 21);
+            this.cboCoffeeFlavor.TabIndex = 1;
+            // 
+            // btnClearDrink
+            // 
+            this.btnClearDrink.Location = new System.Drawing.Point(128, 202);
+            this.btnClearDrink.Name = "btnClearDrink";
+            this.btnClearDrink.Size = new System.Drawing.Size(75, 23);
+            this.btnClearDrink.TabIndex = 2;
+            this.btnClearDrink.Text = "Clear";
+            this.btnClearDrink.UseVisualStyleBackColor = true;
+            this.btnClearDrink.Click += new System.EventHandler(this.btnClearDrink_Click);
+            // 
             // UIMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(503, 267);
+            this.Controls.Add(this.grpSelectCoffeeFlavor);
             this.Controls.Add(this.grpManageItems);
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnClose);
@@ -144,6 +196,8 @@
             this.Text = "Form1";
             this.grpManageItems.ResumeLayout(false);
             this.grpManageItems.PerformLayout();
+            this.grpSelectCoffeeFlavor.ResumeLayout(false);
+            this.grpSelectCoffeeFlavor.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -159,6 +213,11 @@
         private System.Windows.Forms.Button btnRemoveItem;
         private System.Windows.Forms.Button btnCountItems;
         private System.Windows.Forms.GroupBox grpManageItems;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.GroupBox grpSelectCoffeeFlavor;
+        private System.Windows.Forms.ComboBox cboCoffeeFlavor;
+        private System.Windows.Forms.Label lblCoffeeFlavor;
+        private System.Windows.Forms.Button btnClearDrink;
     }
 }
 

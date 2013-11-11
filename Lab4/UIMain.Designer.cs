@@ -40,9 +40,11 @@
             this.grpManageItems = new System.Windows.Forms.GroupBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.grpSelectCoffeeFlavor = new System.Windows.Forms.GroupBox();
-            this.lblCoffeeFlavor = new System.Windows.Forms.Label();
-            this.cboCoffeeFlavor = new System.Windows.Forms.ComboBox();
             this.btnClearDrink = new System.Windows.Forms.Button();
+            this.cboCoffeeFlavor = new System.Windows.Forms.ComboBox();
+            this.lblCoffeeFlavor = new System.Windows.Forms.Label();
+            this.lblSyrupFlavors = new System.Windows.Forms.Label();
+            this.lbxSyrupFlavors = new System.Windows.Forms.ListBox();
             this.grpManageItems.SuspendLayout();
             this.grpSelectCoffeeFlavor.SuspendLayout();
             this.SuspendLayout();
@@ -145,6 +147,8 @@
             // 
             // grpSelectCoffeeFlavor
             // 
+            this.grpSelectCoffeeFlavor.Controls.Add(this.lbxSyrupFlavors);
+            this.grpSelectCoffeeFlavor.Controls.Add(this.lblSyrupFlavors);
             this.grpSelectCoffeeFlavor.Controls.Add(this.btnClearDrink);
             this.grpSelectCoffeeFlavor.Controls.Add(this.cboCoffeeFlavor);
             this.grpSelectCoffeeFlavor.Controls.Add(this.lblCoffeeFlavor);
@@ -155,23 +159,6 @@
             this.grpSelectCoffeeFlavor.TabStop = false;
             this.grpSelectCoffeeFlavor.Text = "Select Coffee Flavor";
             // 
-            // lblCoffeeFlavor
-            // 
-            this.lblCoffeeFlavor.AutoSize = true;
-            this.lblCoffeeFlavor.Location = new System.Drawing.Point(6, 19);
-            this.lblCoffeeFlavor.Name = "lblCoffeeFlavor";
-            this.lblCoffeeFlavor.Size = new System.Drawing.Size(70, 13);
-            this.lblCoffeeFlavor.TabIndex = 0;
-            this.lblCoffeeFlavor.Text = "Coffee Flavor";
-            // 
-            // cboCoffeeFlavor
-            // 
-            this.cboCoffeeFlavor.FormattingEnabled = true;
-            this.cboCoffeeFlavor.Location = new System.Drawing.Point(82, 16);
-            this.cboCoffeeFlavor.Name = "cboCoffeeFlavor";
-            this.cboCoffeeFlavor.Size = new System.Drawing.Size(121, 21);
-            this.cboCoffeeFlavor.TabIndex = 1;
-            // 
             // btnClearDrink
             // 
             this.btnClearDrink.Location = new System.Drawing.Point(128, 202);
@@ -181,6 +168,40 @@
             this.btnClearDrink.Text = "Clear";
             this.btnClearDrink.UseVisualStyleBackColor = true;
             this.btnClearDrink.Click += new System.EventHandler(this.btnClearDrink_Click);
+            // 
+            // cboCoffeeFlavor
+            // 
+            this.cboCoffeeFlavor.FormattingEnabled = true;
+            this.cboCoffeeFlavor.Location = new System.Drawing.Point(82, 16);
+            this.cboCoffeeFlavor.Name = "cboCoffeeFlavor";
+            this.cboCoffeeFlavor.Size = new System.Drawing.Size(121, 21);
+            this.cboCoffeeFlavor.TabIndex = 1;
+            // 
+            // lblCoffeeFlavor
+            // 
+            this.lblCoffeeFlavor.AutoSize = true;
+            this.lblCoffeeFlavor.Location = new System.Drawing.Point(6, 19);
+            this.lblCoffeeFlavor.Name = "lblCoffeeFlavor";
+            this.lblCoffeeFlavor.Size = new System.Drawing.Size(70, 13);
+            this.lblCoffeeFlavor.TabIndex = 0;
+            this.lblCoffeeFlavor.Text = "Coffee Flavor";
+            // 
+            // lblSyrupFlavors
+            // 
+            this.lblSyrupFlavors.AutoSize = true;
+            this.lblSyrupFlavors.Location = new System.Drawing.Point(6, 47);
+            this.lblSyrupFlavors.Name = "lblSyrupFlavors";
+            this.lblSyrupFlavors.Size = new System.Drawing.Size(71, 13);
+            this.lblSyrupFlavors.TabIndex = 3;
+            this.lblSyrupFlavors.Text = "Syrup Flavors";
+            // 
+            // lbxSyrupFlavors
+            // 
+            this.lbxSyrupFlavors.FormattingEnabled = true;
+            this.lbxSyrupFlavors.Location = new System.Drawing.Point(82, 47);
+            this.lbxSyrupFlavors.Name = "lbxSyrupFlavors";
+            this.lbxSyrupFlavors.Size = new System.Drawing.Size(121, 147);
+            this.lbxSyrupFlavors.TabIndex = 4;
             // 
             // UIMain
             // 
@@ -218,6 +239,8 @@
         private System.Windows.Forms.ComboBox cboCoffeeFlavor;
         private System.Windows.Forms.Label lblCoffeeFlavor;
         private System.Windows.Forms.Button btnClearDrink;
+        private System.Windows.Forms.ListBox lbxSyrupFlavors;
+        private System.Windows.Forms.Label lblSyrupFlavors;
     }
 }
 

@@ -13,6 +13,7 @@ namespace CSIT2220_Lab4
     {
         AboutForm about;
         List<String> items;
+        string[] syrupFlavors = { "Hazelnut", "Caramel" };
 
         public UIMain ()
         {
@@ -21,6 +22,8 @@ namespace CSIT2220_Lab4
             items = new List<string>();
             lbxItems.DataSource = items;
             cboCoffeeFlavor.DataSource = items;
+            lbxSyrupFlavors.DataSource = syrupFlavors;
+            lbxSyrupFlavors.SelectedIndex = -1;
         }
 
         private void btnClose_Click ( object sender, EventArgs e )
@@ -109,6 +112,7 @@ namespace CSIT2220_Lab4
         private void btnClearDrink_Click ( object sender, EventArgs e )
         {
             cboCoffeeFlavor.SelectedIndex = -1;
+            lbxSyrupFlavors.SelectedIndex = -1;
         }
 
     }

@@ -35,6 +35,7 @@ namespace Lab5
 
             // set the point value to 0 and make sure it is hidden
             point = 0;
+            currentRoll = 0;
 
         }
 
@@ -67,16 +68,17 @@ namespace Lab5
                     case 7:
                     case 11:
                         // Win!
-
+                        playerWin();
                         break;
                     case 2:
                     case 3:
                     case 12:
                         // Loose
-
+                        playerLoose();
                         break;
                     default:
                         // set point and let player continue
+                        point = currentRoll;
 
                         break;
                 }
@@ -87,12 +89,12 @@ namespace Lab5
                 if ( currentRoll == point )
                 {
                     // win
-
+                    playerWin();
                 }
                 else if ( currentRoll == 7 )
                 {
                     // Loose
-
+                    playerLoose();
                 }
                 else
                 {
@@ -108,7 +110,7 @@ namespace Lab5
             // Show winning message
 
             // Reset the game
-
+            reset();
         }
 
         // Player has lost
@@ -117,6 +119,15 @@ namespace Lab5
             // Show Loosing message
 
             // reset the game
+            reset();
+        }
+
+        // Reset the game
+        private void reset ()
+        {
+            // hide the roll button
+
+            // show the pay button
 
         }
     }

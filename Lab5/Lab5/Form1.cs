@@ -43,15 +43,12 @@ namespace Lab5
         private void roll ()
         {
             // roll the dice
-            dice.roll();
-
-            // the result as an array
-            int[] results = dice.getRoll();
+            int[] result = dice.roll();
 
             // show the appropriate image
 
             // get the total and display
-            currentRoll = dice.getRollTotal();
+            currentRoll = result[0];
 
             // caculate the result
             determineResult();

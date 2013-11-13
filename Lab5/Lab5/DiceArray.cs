@@ -2,7 +2,7 @@
  * Dice.cs
  * Author: Ajen Shireman
  * 
- * Class for simulating a group of dice.
+ * Class for simulating a group of dice as an array.
  * 
  */
 
@@ -14,30 +14,32 @@ using System.Text;
 
 namespace Lab5
 {
-    class Dice
+    class DiceArray
     {
-        private Die[] dice; // Array containing the set of Dice
+        private int[]  dice;    // Array containing the set of Dice
+        private Random roller;  // RNG for rolling the die
 
         /* Constructors */
         // Create a new group of dice
-        public Dice ( int numDice, int sides )
+        public DiceArray ( int numDice, int sides )
         {
-            dice = new Die[numDice];
+            dice = new int[sides];
             for ( int i = 0; i < numDice; i++ )
             {
-                dice[i] = new Die(sides);
+                dice[i] = sides;
             }
+            roller = new Random();
         }
 
         // Create a group of dice with 6 sides
-        public Dice ( int numDice )
+        public DiceArray ( int numDice )
             : this(numDice, 6)
         {
 
         }
 
         // Create a single die with 6 sides
-        public Dice () : this(1, 6)
+        public DiceArray () : this(1, 6)
         {
             
         }
@@ -50,7 +52,7 @@ namespace Lab5
             int[] result = new int[dice.Length + 1];
             for ( int i = 1; i == dice.Length; i++ )
             {
-                result[i + 1] = dice[i].roll();
+                result[i + 1] = roller.Next(1, dice[i]);
                 result[0] += result[i];
             }
             return result;

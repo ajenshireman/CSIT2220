@@ -9,12 +9,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Random;
 using System.Text;
 
 namespace Lab5
 {
-    class DiceArray
+    public class DiceArray
     {
         private int[]  dice;    // Array containing the set of Dice
         private Random roller;  // RNG for rolling the die
@@ -23,7 +22,7 @@ namespace Lab5
         // Create a new group of dice
         public DiceArray ( int numDice, int sides )
         {
-            dice = new int[sides];
+            dice = new int[numDice];
             for ( int i = 0; i < numDice; i++ )
             {
                 dice[i] = sides;
@@ -49,12 +48,17 @@ namespace Lab5
         // Returns an array containing the result of each individual die roll and the total at [0]
         public int[] roll ()
         {
+            //roller = new Random();
             int[] result = new int[dice.Length + 1];
-            for ( int i = 1; i == dice.Length; i++ )
+            Console.WriteLine("result.Length == " + result.Length);
+            for ( int i = 0; i < dice.Length; i++ )
             {
-                result[i + 1] = roller.Next(1, dice[i]);
-                result[0] += result[i];
+                Console.WriteLine("i == " + i);
+                result[i + 1] = roller.Next(1, dice[i] );
+                result[0] += result[i + 1];
+                Console.WriteLine("result[" + (i+1) + "]: " + result[i + 1] + " Total: " + result[0]);
             }
+            Console.WriteLine("roller.Next(1, " + (dice[0]+1) + ")");
             return result;
         }
     }

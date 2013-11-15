@@ -8,23 +8,27 @@
 
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
-using System.Random;
 using System.Text;
 
 namespace Lab5
 {
     class Die
     {
-        private int    sides;   // Number of sides on the die
-        private Random roller;  // RNG for rolling the die
+        /* Class Variables */
+        private static Random roller = new Random();  // RNG for rolling the die
 
+        /* Instance Variables */
+        private int                 sides;      // Number of sides on the die
+        //private int                 roll;       // The die's current roll;
+        //private System.Drawing.Image faceImage; // Image corresponding to the die's current roll
+        
         /* Constructors */
         // Create a die with any number of sides
         public Die ( int sides )
         {
             this.sides = sides;
-            roller = new Random();
         }
 
         // Create a die with 6 sides
@@ -37,7 +41,7 @@ namespace Lab5
         // Roll the bones
         public int roll ()
         {
-            return roller.Next(1, sides);
+            return roller.Next(1, sides + 1);
         }
     }
 }

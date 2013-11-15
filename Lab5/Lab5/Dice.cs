@@ -9,12 +9,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Random;
 using System.Text;
 
 namespace Lab5
 {
-    class Dice
+    public class Dice
     {
         private Die[] dice; // Array containing the set of Dice
 
@@ -48,10 +47,10 @@ namespace Lab5
         public int[] roll ()
         {
             int[] result = new int[dice.Length + 1];
-            for ( int i = 1; i == dice.Length; i++ )
+            for ( int i = 0; i < dice.Length; i++ )
             {
                 result[i + 1] = dice[i].roll();
-                result[0] += result[i];
+                result[0] += result[i + 1];
             }
             return result;
         }

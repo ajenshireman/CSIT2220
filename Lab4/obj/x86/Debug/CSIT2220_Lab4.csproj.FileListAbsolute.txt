@@ -20,3 +20,5 @@ D:\Users\Ajax\Documents\GitHub\CSIT2220\Lab4\obj\x86\Debug\GenerateResource.read
 D:\Users\Ajax\Documents\GitHub\CSIT2220\Lab4\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\Users\Ajax\Documents\GitHub\CSIT2220\Lab4\bin\Debug\CSIT2220_Lab4.exe
 D:\Users\Ajax\Documents\GitHub\CSIT2220\Lab4\bin\Debug\CSIT2220_Lab4.pdb
+F:\CSIT 2220\Labs\CSIT2220\Lab4\obj\x86\Debug\CSIT2220_Lab4.exe
+F:\CSIT 2220\Labs\CSIT2220\Lab4\obj\x86\Debug\CSIT2220_Lab4.pdb

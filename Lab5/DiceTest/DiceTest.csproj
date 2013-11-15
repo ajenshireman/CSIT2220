@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1E6E66E1-1585-4E76-9FCF-CB0AD60F8864}</ProjectGuid>
+    <ProjectGuid>{1C08F51F-7124-4906-8918-2B91F3F3F247}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lab5</RootNamespace>
-    <AssemblyName>Lab5</AssemblyName>
+    <RootNamespace>DiceTest</RootNamespace>
+    <AssemblyName>DiceTest</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -46,30 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DiceArray.cs" />
-    <Compile Include="Die.cs" />
-    <Compile Include="Dice.cs" />
-    <Compile Include="DieFaces.cs" />
-    <Compile Include="Game.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Game.Designer.cs">
-      <DependentUpon>Game.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Game.resx">
-      <DependentUpon>Game.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -78,7 +56,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -91,28 +68,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="img\dice.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\diceRoll.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\face1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\face2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\face3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\face4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\face5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\face6.png" />
+    <ProjectReference Include="..\Lab5\Lab5.csproj">
+      <Project>{1E6E66E1-1585-4E76-9FCF-CB0AD60F8864}</Project>
+      <Name>Lab5</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

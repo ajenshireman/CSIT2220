@@ -73,6 +73,12 @@ namespace Lab5
             pnlDie2.BackgroundImage = DieFaces.get(6);
         }
 
+        private void btnHelp_Click ( object sender, EventArgs e )
+        {
+            Help help = new Help();
+            help.Show();
+        }
+
         /* Game Logic */
         // While the dice are being shaken, show random faces on each
         private void shake ()
@@ -193,5 +199,6 @@ namespace Lab5
             // reset has been done
             doReset = false;
         }
+
     }
 }

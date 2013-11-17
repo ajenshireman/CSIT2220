@@ -4,10 +4,11 @@
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    <h2>
-        About
-    </h2>
+    <h1>CSIT 2220 Lab 6</h1>
     <p>
-        Put content here.
+        Author: Ajen Shireman
+    </p>
+    <p>
+        Reservation system for 'High Adventure Agency'
     </p>
 </asp:Content>

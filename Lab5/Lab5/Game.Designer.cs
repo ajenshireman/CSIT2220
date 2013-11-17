@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.pnlDice = new System.Windows.Forms.Panel();
-            this.lblMessage = new System.Windows.Forms.Label();
             this.pnlDie2 = new System.Windows.Forms.Panel();
             this.pnlDie1 = new System.Windows.Forms.Panel();
+            this.lblMessage = new System.Windows.Forms.Label();
             this.btnRoll = new System.Windows.Forms.Button();
             this.lblPoint = new System.Windows.Forms.Label();
             this.lblRoll = new System.Windows.Forms.Label();
@@ -50,20 +50,6 @@
             this.pnlDice.Size = new System.Drawing.Size(300, 150);
             this.pnlDice.TabIndex = 0;
             // 
-            // lblMessage
-            // 
-            this.lblMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMessage.AutoSize = true;
-            this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessage.Location = new System.Drawing.Point(106, 234);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(85, 37);
-            this.lblMessage.TabIndex = 0;
-            this.lblMessage.Text = "Roll!";
-            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pnlDie2
             // 
             this.pnlDie2.Location = new System.Drawing.Point(155, 5);
@@ -78,12 +64,26 @@
             this.pnlDie1.Size = new System.Drawing.Size(140, 140);
             this.pnlDie1.TabIndex = 0;
             // 
+            // lblMessage
+            // 
+            this.lblMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.Location = new System.Drawing.Point(106, 234);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(85, 37);
+            this.lblMessage.TabIndex = 0;
+            this.lblMessage.Text = "Roll!";
+            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnRoll
             // 
-            this.btnRoll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnRoll.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRoll.BackgroundImage")));
             this.btnRoll.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnRoll.FlatAppearance.BorderSize = 0;
+            this.btnRoll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRoll.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRoll.Location = new System.Drawing.Point(59, 274);
             this.btnRoll.Name = "btnRoll";

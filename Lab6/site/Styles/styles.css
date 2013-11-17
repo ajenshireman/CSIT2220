@@ -2,43 +2,39 @@
     
 }
 
-.packages ul {
-    
-}
-
-.packages > ul > li {
-    
-}
-
 .packages h1 {
     
 }
 
-.packages h2 {
+.packages ul {
     
 }
 
-.packages .package-name {
+.package {
     
 }
 
-.packages .details {
+.package-name {
+    
+}
+
+.package .details {
     display: none;
 }
 
-.packages .description {
+.package .description {
     
 }
 
-.packages .extras {
+.package .extras {
     display: none;
 }
 
-.packages .price {
+.package .price {
     
 }
 
-.packages .perDay {
+.package .perDay {
     
 }
 

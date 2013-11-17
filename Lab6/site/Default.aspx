@@ -7,7 +7,7 @@
     <div id="packages">
         <h1>Adventure Packages</h1>
         <ul>
-            <li>
+            <li class="package">
                 <h2>Package Name</h2>
                 <div class="desription">Package description</div>
                 <div class="price">Price: $000 per person</div>
@@ -17,7 +17,7 @@
                     <li><span class="price"><span class="perDay">Extra 2 Name: $000 per person per day</span></span></li>
                 </ul>
             </li>
-            <li>
+            <li class="package">
                 <h2>Package Name</h2>
                 <div class="desription">Package description</div>
                 <div class="price">Price: $000 per person</div>
@@ -27,7 +27,7 @@
                     <li><span class="price"><span class="perDay">Extra 2 Name: $000 per person per day</span></span></li>
                 </ul>
             </li>
-            <li>
+            <li class="package">
                 <h2>Package Name</h2>
                 <div class="desription">Package description</div>
                 <div class="price">Price: $000 per person</div>
@@ -37,7 +37,7 @@
                     <li><span class="price"><span class="perDay">Extra 2 Name: $000 per person per day</span></span></li>
                 </ul>
             </li>
-            <li>
+            <li class="package">
                 <h2>Package Name</h2>
                 <div class="desription">Package description</div>
                 <div class="price">Price: $000 per person</div>

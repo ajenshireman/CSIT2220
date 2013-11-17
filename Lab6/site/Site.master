@@ -11,6 +11,12 @@
 </head>
 <body>
     <form runat="server">
+    <asp:ScriptManager ID="ASP_IS_SHIT" runat="server">
+        <Scripts>
+            <asp:ScriptReference Path="~/Scripts/jquery-1.4.1.min.js" />
+            <asp:ScriptReference Path="~/Scripts/script.js" />
+        </Scripts>
+    </asp:ScriptManager>
     <div class="page">
         <div class="header">
             <div class="title">

@@ -4,14 +4,49 @@
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    <h2>
-        Welcome to ASP.NET!
-    </h2>
-    <p>
-        To learn more about ASP.NET visit <a href="http://www.asp.net" title="ASP.NET Website">www.asp.net</a>.
-    </p>
-    <p>
-        You can also find <a href="http://go.microsoft.com/fwlink/?LinkID=152368&amp;clcid=0x409"
-            title="MSDN ASP.NET Docs">documentation on ASP.NET at MSDN</a>.
-    </p>
+    <div id="packages">
+        <h1>Adventure Packages</h1>
+        <ul>
+            <li>
+                <h2>Package Name</h2>
+                <div class="desription">Package description</div>
+                <div class="price">Price: $000 per person</div>
+                <button class="btn btn-extras">Extras</button>
+                <ul class="extras">
+                    <li><span class="price">Extra 1 Name: $000 per person</span></li>
+                    <li><span class="price"><span class="perDay">Extra 2 Name: $000 per person per day</span></span></li>
+                </ul>
+            </li>
+            <li>
+                <h2>Package Name</h2>
+                <div class="desription">Package description</div>
+                <div class="price">Price: $000 per person</div>
+                <button class="btn btn-extras">Extras</button>
+                <ul class="extras">
+                    <li><span class="price">Extra 1 Name: $000 per person</span></li>
+                    <li><span class="price"><span class="perDay">Extra 2 Name: $000 per person per day</span></span></li>
+                </ul>
+            </li>
+            <li>
+                <h2>Package Name</h2>
+                <div class="desription">Package description</div>
+                <div class="price">Price: $000 per person</div>
+                <button class="btn btn-extras">Extras</button>
+                <ul class="extras">
+                    <li><span class="price">Extra 1 Name: $000 per person</span></li>
+                    <li><span class="price"><span class="perDay">Extra 2 Name: $000 per person per day</span></span></li>
+                </ul>
+            </li>
+            <li>
+                <h2>Package Name</h2>
+                <div class="desription">Package description</div>
+                <div class="price">Price: $000 per person</div>
+                <button class="btn btn-extras">Extras</button>
+                <ul class="extras">
+                    <li><span class="price">Extra 1 Name: $000 per person</span></li>
+                    <li><span class="price"><span class="perDay">Extra 2 Name: $000 per person per day</span></span></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 </asp:Content>

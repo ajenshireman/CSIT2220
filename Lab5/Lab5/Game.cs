@@ -35,7 +35,6 @@ namespace Lab5
             pnlDie2.BackColor = Color.Transparent;
             lblPoint.BackColor = Color.Transparent;
             lblRoll.BackColor = Color.Transparent;
-            lblMessage.BackColor = Color.Transparent;
             btnRoll.BackColor = Color.Transparent;
             btnRoll.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnRoll.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -78,7 +77,7 @@ namespace Lab5
         // While the dice are being shaken, show random faces on each
         private void shake ()
         {
-            lblMessage.Text = MSG_ROLLING;
+            btnRoll.Text = MSG_ROLLING;
             rolling = true;
             timer1.Start();
         }
@@ -131,7 +130,7 @@ namespace Lab5
                         this.point = currentRoll;
                         lblPoint.Text = "Point: " + point;
                         lblPoint.Show();
-                        lblMessage.Text = MSG_READY;
+                        btnRoll.Text = MSG_READY;
                         break;
                 }
             }
@@ -151,7 +150,7 @@ namespace Lab5
                 else
                 {
                     // Continue
-                    lblMessage.Text = MSG_READY;
+                    btnRoll.Text = MSG_READY;
                 }
             }
         }
@@ -160,7 +159,7 @@ namespace Lab5
         private void playerWin ()
         {
             // Show winning message
-            lblMessage.Text = MSG_WIN;
+            btnRoll.Text = MSG_WIN;
 
             // Reset the game
             doReset = true;
@@ -170,7 +169,7 @@ namespace Lab5
         private void playerLoose ()
         {
             // Show Loosing message
-            lblMessage.Text = MSG_LOOSE;
+            btnRoll.Text = MSG_LOOSE;
 
             // reset the game
             doReset = true;
@@ -189,7 +188,7 @@ namespace Lab5
             rolling = false;
 
             // Reset mesage
-            lblMessage.Text = MSG_READY;
+            btnRoll.Text = MSG_READY;
 
             // reset has been done
             doReset = false;

@@ -29,11 +29,9 @@
         private void InitializeComponent ()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.pnlDice = new System.Windows.Forms.Panel();
             this.pnlDie2 = new System.Windows.Forms.Panel();
             this.pnlDie1 = new System.Windows.Forms.Panel();
-            this.lblMessage = new System.Windows.Forms.Label();
             this.btnRoll = new System.Windows.Forms.Button();
             this.lblPoint = new System.Windows.Forms.Label();
             this.lblRoll = new System.Windows.Forms.Label();
@@ -64,31 +62,22 @@
             this.pnlDie1.Size = new System.Drawing.Size(140, 140);
             this.pnlDie1.TabIndex = 0;
             // 
-            // lblMessage
-            // 
-            this.lblMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMessage.AutoSize = true;
-            this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessage.Location = new System.Drawing.Point(106, 234);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(85, 37);
-            this.lblMessage.TabIndex = 0;
-            this.lblMessage.Text = "Roll!";
-            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btnRoll
             // 
-            this.btnRoll.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRoll.BackgroundImage")));
             this.btnRoll.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnRoll.FlatAppearance.BorderSize = 0;
             this.btnRoll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRoll.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRoll.Location = new System.Drawing.Point(59, 274);
+            this.btnRoll.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRoll.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnRoll.Image = global::Lab5.Properties.Resources.diceRoll;
+            this.btnRoll.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRoll.Location = new System.Drawing.Point(59, 234);
             this.btnRoll.Name = "btnRoll";
-            this.btnRoll.Size = new System.Drawing.Size(200, 101);
+            this.btnRoll.Size = new System.Drawing.Size(200, 145);
             this.btnRoll.TabIndex = 1;
+            this.btnRoll.Text = "Roll!";
+            this.btnRoll.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnRoll.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnRoll.UseVisualStyleBackColor = true;
             this.btnRoll.Click += new System.EventHandler(this.btnRoll_Click);
             // 
@@ -127,7 +116,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Lab5.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(324, 387);
-            this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.lblRoll);
             this.Controls.Add(this.lblPoint);
             this.Controls.Add(this.btnRoll);
@@ -149,7 +137,6 @@
         private System.Windows.Forms.Button btnRoll;
         private System.Windows.Forms.Label lblPoint;
         private System.Windows.Forms.Label lblRoll;
-        private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.Timer timer1;
 
     }

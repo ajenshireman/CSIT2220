@@ -4,7 +4,7 @@
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    <div id="packages">
+    <div class="packages">
         <h1>Adventure Packages</h1>
         <ul>
             <li class="package">

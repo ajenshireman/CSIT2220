@@ -25,7 +25,7 @@
 }
 
 .package .details {
-    //display: none;
+    
 }
 
 .package .description {
@@ -33,7 +33,7 @@
 }
 
 .package .extras {
-    //display: none;
+    display: none;
 }
 
 .package .price {

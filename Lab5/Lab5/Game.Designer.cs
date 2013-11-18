@@ -69,7 +69,7 @@
             this.btnRoll.FlatAppearance.BorderSize = 0;
             this.btnRoll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRoll.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRoll.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnRoll.ForeColor = System.Drawing.Color.White;
             this.btnRoll.Image = global::Lab5.Properties.Resources.diceRoll;
             this.btnRoll.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRoll.Location = new System.Drawing.Point(59, 234);
@@ -87,6 +87,7 @@
             this.lblPoint.AutoSize = true;
             this.lblPoint.BackColor = System.Drawing.SystemColors.Control;
             this.lblPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPoint.ForeColor = System.Drawing.Color.White;
             this.lblPoint.Location = new System.Drawing.Point(108, 201);
             this.lblPoint.Name = "lblPoint";
             this.lblPoint.Size = new System.Drawing.Size(80, 25);
@@ -99,6 +100,7 @@
             this.lblRoll.AutoSize = true;
             this.lblRoll.BackColor = System.Drawing.SystemColors.Control;
             this.lblRoll.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoll.ForeColor = System.Drawing.Color.White;
             this.lblRoll.Location = new System.Drawing.Point(121, 165);
             this.lblRoll.Name = "lblRoll";
             this.lblRoll.Size = new System.Drawing.Size(67, 25);
@@ -116,6 +118,7 @@
             this.btnHelp.FlatAppearance.BorderSize = 0;
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.ForeColor = System.Drawing.Color.White;
             this.btnHelp.Location = new System.Drawing.Point(126, 385);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(75, 23);

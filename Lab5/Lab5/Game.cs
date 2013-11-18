@@ -79,7 +79,7 @@ namespace Lab5
         private void btnHelp_Click ( object sender, EventArgs e )
         {
             Help help = new Help();
-            help.Show();
+            help.ShowDialog();
         }
 
         /* Game Logic */

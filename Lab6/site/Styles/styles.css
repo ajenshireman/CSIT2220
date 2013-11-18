@@ -15,6 +15,11 @@
     
 }
 
+.package-title .package-name,
+.package-title .btn-book {
+    display: inline;
+}
+
 .package-name {
     
 }

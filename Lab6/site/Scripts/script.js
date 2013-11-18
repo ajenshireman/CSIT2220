@@ -1,4 +1,5 @@
-﻿$('document').ready(function(){
+﻿$('document').ready(function () {
+    /*
     $('.btn-extras').click(function(e){
         e.preventDefault();
         e.stopPropagation();
@@ -12,5 +13,5 @@
         e.stopPropagation();
         $(this).closest('.package').find('.details').slideToggle();
     });
-    
+    */
 });

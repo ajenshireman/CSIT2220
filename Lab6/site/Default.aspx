@@ -8,14 +8,12 @@
         <h1>Adventure Packages</h1>
         <ul>
             <li class="package">
-                <div class="package-title">
-                    <h2 class="package-name">Package Name</h2>
-                    <button class="btn btn-book">Book Now!</button>
-                </div>
+                <h2 class="package-name">Package Name</h2>
                 <div class="details">
                     <div class="desription">Package description</div>
                     <div class="price">Price: $000 per person</div>
-                    <button class="btn btn-extras">Extras</button>
+                    <button class="btn btn-inline btn-extras">Extras</button>
+                    <button class="btn btn-inline btn-book">Book Now!</button>
                     <ul class="extras">
                         <li><span class="price">Extra 1 Name: $000 per person</span></li>
                         <li><span class="price"><span class="perDay">Extra 2 Name: $000 per person per day</span></span></li>

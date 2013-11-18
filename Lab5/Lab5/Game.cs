@@ -38,6 +38,9 @@ namespace Lab5
             btnRoll.BackColor = Color.Transparent;
             btnRoll.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnRoll.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnHelp.BackColor = Color.Transparent;
+            btnHelp.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnHelp.FlatAppearance.MouseDownBackColor = Color.Transparent;
 
             // Create the dice
             dice = new Dice(2, 6);

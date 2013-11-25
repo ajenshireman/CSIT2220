@@ -19,10 +19,14 @@ public class Package
 	{
 	}
 
-    public Package ( string name, string description, decimal price )
+    public Package ( string name, string description, decimal price, Extra[] extras )
     {
         this.name = name;
         this.description = description;
         this.price = price;
+        for ( int i = 0; i < extras.Length; i++ )
+        {
+            this.extras.Add(extras[i]);
+        }
     }
 }

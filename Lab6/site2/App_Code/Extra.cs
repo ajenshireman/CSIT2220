@@ -32,5 +32,7 @@ public class Extra
     {
     }
 
-
+    public string getName () { return this.name; }
+    public decimal getPrice () { return this.price; }
+    public bool isPerDay () { return this.perDay; }
 }

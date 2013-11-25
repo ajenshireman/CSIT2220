@@ -29,4 +29,9 @@ public class Package
             this.extras.Add(extras[i]);
         }
     }
+
+    public string getName () { return this.name; }
+    public string getDescription () { return this.description; }
+    public decimal getPrice () { return this.price; }
+    public Extra[] getExtras () { return this.extras.ToArray(); }
 }

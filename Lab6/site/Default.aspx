@@ -15,8 +15,8 @@
                     <button class="btn btn-inline btn-extras">Extras</button>
                     <button class="btn btn-inline btn-book">Book Now!</button>
                     <ul class="extras">
-                        <li><span class="price" data-price="" dataperDay="">Extra 1 Name: $000 per person</span></li>
-                        <li><span class="price perDa" data-price="" dataperDay=""Extra 2 Name: $000 per person per day</span></li>
+                        <li><span class="price" data-price="" data-perDay="">Extra 1 Name: $000 per person</span></li>
+                        <li><span class="price perDay" data-price="" data-perDay=""Extra 2 Name: $000 per person per day</span></li>
                     </ul>
                 </div>
             </li>

@@ -11,12 +11,12 @@
                 <h2 class="package-name">Package Name</h2>
                 <div class="details">
                     <div class="desription">Package description</div>
-                    <div class="price">Price: $000 per person</div>
+                    <div class="price" data-price="">Price: $000 per person</div>
                     <button class="btn btn-inline btn-extras">Extras</button>
                     <button class="btn btn-inline btn-book">Book Now!</button>
                     <ul class="extras">
-                        <li><span class="price">Extra 1 Name: $000 per person</span></li>
-                        <li><span class="price"><span class="perDay">Extra 2 Name: $000 per person per day</span></span></li>
+                        <li><span class="price" data-price="" dataperDay="">Extra 1 Name: $000 per person</span></li>
+                        <li><span class="price" data-price="" dataperDay=""><span class="perDay">Extra 2 Name: $000 per person per day</span></span></li>
                     </ul>
                 </div>
             </li>

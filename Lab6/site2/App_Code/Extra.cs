@@ -10,7 +10,7 @@ using System.Web;
 /// </summary>
 public class Extra
 {
-    private const bool PER_DAY = true;
+    public const bool PER_DAY = true;
 
     private string  name;   // Name of the extra service
     private decimal price;  // Price per person

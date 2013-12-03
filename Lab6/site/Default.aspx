@@ -7,7 +7,7 @@
     <div class="packages">
         <h1>Adventure Packages</h1>
         <ul>
-            <li class="package">
+            <li class="package" data-packageID="">
                 <h2 class="package-name">Package Name</h2>
                 <div class="details">
                     <div class="desription">Package description</div>

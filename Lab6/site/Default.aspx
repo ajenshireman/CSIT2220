@@ -7,16 +7,53 @@
     <div class="packages">
         <h1>Adventure Packages</h1>
         <ul>
-            <li class="package" data-packageID="">
-                <h2 class="package-name">Package Name</h2>
+            <li class="package" data-packageID="1">
+                <h2 class="package-name">Devil’s Courthouse Adventure Weekend</h2>
                 <div class="details">
-                    <div class="desription">Package description</div>
-                    <div class="price" data-price="">Price: $000 per person</div>
+                    <div class="desription">An action packed three days weekend spent camping, rock climbing, and rappelling at Devil’s Courthouse, North Carolina. This getaway for novices and expert alike. Climbing instructor is available to beginners at an optional low price. Camping equipment rental is also available.</div>
+                    <div class="price" data-price="350">Price</div>
                     <button class="btn btn-inline btn-extras">Extras</button>
                     <button class="btn btn-inline btn-book">Book Now!</button>
                     <ul class="extras">
-                        <li><span class="price" data-price="">Extra 1 Name: $000 per person</span></li>
-                        <li><span class="price perDay" data-price="">Extra 2 Name: $000 per person per day</span></li>
+                        <li><span class="price" data-price="30">Climbing Instruction</span></li>
+                        <li><span class="price perDay" data-price="40">Equipment Rental</span></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="package" data-packageID="2">
+                <h2 class="package-name">Scuba Bahama</h2>
+                <div class="details">
+                    <div class="desription">A week-long cruise to Bahama with three day with three days of scuba diving. Those with prior experience may dive right in, while beginners should choose to take the optional, but very affordable lesson.</div>
+                    <div class="price" data-price="600">Price</div>
+                    <button class="btn btn-inline btn-extras">Extras</button>
+                    <button class="btn btn-inline btn-book">Book Now!</button>
+                    <ul class="extras">
+                        <li><span class="price" data-price="40">SCUBA Instruction</span></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="package" data-packageID="3">
+                <h2 class="package-name">Sky Dive Colorado</h2>
+                <div class="details">
+                    <div class="desription">Four thrilling days with expert sky diving instructors in Colorado Springs. For lodging, you may choose either the Wilderness Lodge or Luxury Inn.</div>
+                    <div class="price" data-price="400">Price</div>
+                    <button class="btn btn-inline btn-extras">Extras</button>
+                    <button class="btn btn-inline btn-book">Book Now!</button>
+                    <ul class="extras">
+                        <li><span class="price perDay" data-price="65">Wilderness Lodge</span></li>
+                        <li><span class="price perDay" data-price="120">Luxury Inn</span></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="package" data-packageID="4">
+                <h2 class="package-name">Baron Cliff</h2>
+                <div class="details">
+                    <div class="desription">Eight days spent hiking and exploring caves in the Barron Cliff Wilderness , in Tennessee. Camping equipment rental is available.</div>
+                    <div class="price" data-price="700">Price</div>
+                    <button class="btn btn-inline btn-extras">Extras</button>
+                    <button class="btn btn-inline btn-book">Book Now!</button>
+                    <ul class="extras">
+                        <li><span class="price" data-price="40">Equipment Rental</span></li>
                     </ul>
                 </div>
             </li>

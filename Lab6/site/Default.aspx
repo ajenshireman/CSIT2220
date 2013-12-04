@@ -59,4 +59,49 @@
             </li>
         </ul>
     </div>
+    <div class="bookingForms">
+        <div class="package" data-packageID="1">
+            <div class="bookingForm">
+                <h2 class="package-name">Devil's Courthouse Adventure Weekend</h2>
+                <div>
+                    Number of people: <input class="price price-base" data-price="350" size="5" required />
+                </div>
+                <div>
+                    Climbing Instruction: <input id="numInstruct-1" class="price" data-price="30" size="5" required /> people
+                </div>
+                <div>
+                    <span id="numRent-1">Equipment Rental: <input class="price perDay" data-price="40" size="5" required /> people for <input class="days" size="5" required /></span>
+                </div>
+                <div>
+                    <button class="btn btn-inline btn-confirm">Confirm</button>
+                </div>
+            </div>
+            <div class="confirmation">
+                <div>
+                    Number of people in party: <span class="result numBase"></span> Charge: $<span class="result priceBase"></span>
+                <div>
+                <div>
+                    Number of people who will need climbing instruction: <span class="result numInstruct"></span> <span class="priceInstruct"></span>
+                <div>
+                <div>
+                    Number of people who will rent climbing equipment: <span class="result numRent"></span> Charge: $<span class="result priceRent"></span>
+                <div>
+                <div>
+                    Charges: $<span class="result subTotal"></span>
+                <div>
+                <div>
+                    Discount: $<span class="result discount"></span>
+                <div>
+                <div>
+                    Total: $<span class="result total"></span>
+                <div>
+                <div>
+                    Required Deposit: $<span class="result deposit"></span>
+                <div>
+                <div>
+                    <button class="btn btn-inline btn-finish>OK</button>
+                </div>
+            <div>
+        </div>
+    </div>
 </asp:Content>

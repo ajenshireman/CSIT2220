@@ -50,3 +50,15 @@
 .btn-inline {
     display: inline;
 }
+
+.bookingForms {
+    display: none;
+}
+
+.bookingForms .package {
+    display: none;
+}
+
+.bookingForms .package .confirmation {
+    display: none;
+}

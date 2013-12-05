@@ -50,6 +50,8 @@ namespace Lab7
             string origin = tbxOrigin.Text;
             string destination = tbxDestination.Text;
             DateTime departure = dtpFlighDate.Value;
+
+            // Assign a seat
             int seatNumber = 0;
             string section = "";
             if ( rbtFirstClass.Checked )
@@ -66,14 +68,21 @@ namespace Lab7
             {
                 MessageBox.Show("Please select First Class or Ecomnomy.");
             }
+
+            // Get the flight number
             int filghtNumber = getFlightNumber();
-            string ticket = "Last Name: " + nameLast + "\tFirst Name: " + nameFirst + "\n" +
-                            "Origin: " + origin + "\tDestination: " + destination + "\n" +
+
+            // print the ticket
+            string ticket = "Last Name: " + nameLast + "\tFirst Name: " + nameFirst + "\n\n" +
+                            "Origin: " + origin + "\tDestination: " + destination + "\n\n" +
                             "Fight Number: " + filghtNumber.ToString() + "\n" + 
-                            "Departure: " + departure.ToString() + "\n" +
+                            "Departure: " + departure.ToString() + "\n\n" +
                             "Section: " + section + "\n" +
                             "Seat Number: " + seatNumber.ToString() + "\n";
             tbxBordingPass.Text = ticket;
+
+            // Clear the input
+            clearFields();
         }
 
         // Pick a seat

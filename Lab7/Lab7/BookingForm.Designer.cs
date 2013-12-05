@@ -29,20 +29,20 @@
         private void InitializeComponent ()
         {
             this.pnlInfo = new System.Windows.Forms.Panel();
-            this.lblNameFirst = new System.Windows.Forms.Label();
-            this.lblNameLast = new System.Windows.Forms.Label();
-            this.lblOrign = new System.Windows.Forms.Label();
-            this.lblDestination = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.rbtFirstClass = new System.Windows.Forms.RadioButton();
-            this.rbtEconomy = new System.Windows.Forms.RadioButton();
-            this.btnBookFlight = new System.Windows.Forms.Button();
-            this.tbxNameFirst = new System.Windows.Forms.TextBox();
-            this.tbxNameLast = new System.Windows.Forms.TextBox();
-            this.tbxOrigin = new System.Windows.Forms.TextBox();
-            this.tbxDestination = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.dtpFlighDate = new System.Windows.Forms.DateTimePicker();
+            this.tbxDestination = new System.Windows.Forms.TextBox();
+            this.tbxOrigin = new System.Windows.Forms.TextBox();
+            this.tbxNameLast = new System.Windows.Forms.TextBox();
+            this.tbxNameFirst = new System.Windows.Forms.TextBox();
+            this.btnBookFlight = new System.Windows.Forms.Button();
+            this.rbtEconomy = new System.Windows.Forms.RadioButton();
+            this.rbtFirstClass = new System.Windows.Forms.RadioButton();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblDestination = new System.Windows.Forms.Label();
+            this.lblOrign = new System.Windows.Forms.Label();
+            this.lblNameLast = new System.Windows.Forms.Label();
+            this.lblNameFirst = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbxBordingPass = new System.Windows.Forms.RichTextBox();
             this.pnlInfo.SuspendLayout();
@@ -52,7 +52,7 @@
             // pnlInfo
             // 
             this.pnlInfo.Controls.Add(this.btnCancel);
-            this.pnlInfo.Controls.Add(this.dateTimePicker1);
+            this.pnlInfo.Controls.Add(this.dtpFlighDate);
             this.pnlInfo.Controls.Add(this.tbxDestination);
             this.pnlInfo.Controls.Add(this.tbxOrigin);
             this.pnlInfo.Controls.Add(this.tbxNameLast);
@@ -70,61 +70,60 @@
             this.pnlInfo.Size = new System.Drawing.Size(346, 137);
             this.pnlInfo.TabIndex = 0;
             // 
-            // lblNameFirst
+            // btnCancel
             // 
-            this.lblNameFirst.AutoSize = true;
-            this.lblNameFirst.Location = new System.Drawing.Point(4, 4);
-            this.lblNameFirst.Name = "lblNameFirst";
-            this.lblNameFirst.Size = new System.Drawing.Size(57, 13);
-            this.lblNameFirst.TabIndex = 0;
-            this.lblNameFirst.Text = "First Name";
+            this.btnCancel.Location = new System.Drawing.Point(89, 105);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 13;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // lblNameLast
+            // dtpFlighDate
             // 
-            this.lblNameLast.AutoSize = true;
-            this.lblNameLast.Location = new System.Drawing.Point(174, 7);
-            this.lblNameLast.Name = "lblNameLast";
-            this.lblNameLast.Size = new System.Drawing.Size(58, 13);
-            this.lblNameLast.TabIndex = 1;
-            this.lblNameLast.Text = "Last Name";
+            this.dtpFlighDate.Location = new System.Drawing.Point(68, 57);
+            this.dtpFlighDate.Name = "dtpFlighDate";
+            this.dtpFlighDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpFlighDate.TabIndex = 12;
             // 
-            // lblOrign
+            // tbxDestination
             // 
-            this.lblOrign.AutoSize = true;
-            this.lblOrign.Location = new System.Drawing.Point(4, 33);
-            this.lblOrign.Name = "lblOrign";
-            this.lblOrign.Size = new System.Drawing.Size(34, 13);
-            this.lblOrign.TabIndex = 2;
-            this.lblOrign.Text = "Origin";
+            this.tbxDestination.Location = new System.Drawing.Point(238, 30);
+            this.tbxDestination.Name = "tbxDestination";
+            this.tbxDestination.Size = new System.Drawing.Size(100, 20);
+            this.tbxDestination.TabIndex = 11;
             // 
-            // lblDestination
+            // tbxOrigin
             // 
-            this.lblDestination.AutoSize = true;
-            this.lblDestination.Location = new System.Drawing.Point(178, 33);
-            this.lblDestination.Name = "lblDestination";
-            this.lblDestination.Size = new System.Drawing.Size(54, 13);
-            this.lblDestination.TabIndex = 3;
-            this.lblDestination.Text = "Destiation";
+            this.tbxOrigin.Location = new System.Drawing.Point(68, 30);
+            this.tbxOrigin.Name = "tbxOrigin";
+            this.tbxOrigin.Size = new System.Drawing.Size(100, 20);
+            this.tbxOrigin.TabIndex = 10;
             // 
-            // lblDate
+            // tbxNameLast
             // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(4, 63);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(30, 13);
-            this.lblDate.TabIndex = 4;
-            this.lblDate.Text = "Date";
+            this.tbxNameLast.Location = new System.Drawing.Point(238, 7);
+            this.tbxNameLast.Name = "tbxNameLast";
+            this.tbxNameLast.Size = new System.Drawing.Size(100, 20);
+            this.tbxNameLast.TabIndex = 9;
             // 
-            // rbtFirstClass
+            // tbxNameFirst
             // 
-            this.rbtFirstClass.AutoSize = true;
-            this.rbtFirstClass.Location = new System.Drawing.Point(7, 83);
-            this.rbtFirstClass.Name = "rbtFirstClass";
-            this.rbtFirstClass.Size = new System.Drawing.Size(72, 17);
-            this.rbtFirstClass.TabIndex = 5;
-            this.rbtFirstClass.TabStop = true;
-            this.rbtFirstClass.Text = "First Class";
-            this.rbtFirstClass.UseVisualStyleBackColor = true;
+            this.tbxNameFirst.Location = new System.Drawing.Point(68, 4);
+            this.tbxNameFirst.Name = "tbxNameFirst";
+            this.tbxNameFirst.Size = new System.Drawing.Size(100, 20);
+            this.tbxNameFirst.TabIndex = 8;
+            // 
+            // btnBookFlight
+            // 
+            this.btnBookFlight.Location = new System.Drawing.Point(7, 106);
+            this.btnBookFlight.Name = "btnBookFlight";
+            this.btnBookFlight.Size = new System.Drawing.Size(75, 23);
+            this.btnBookFlight.TabIndex = 7;
+            this.btnBookFlight.Text = "Book Flight";
+            this.btnBookFlight.UseVisualStyleBackColor = true;
+            this.btnBookFlight.Click += new System.EventHandler(this.btnBookFlight_Click);
             // 
             // rbtEconomy
             // 
@@ -137,58 +136,61 @@
             this.rbtEconomy.Text = "Economy";
             this.rbtEconomy.UseVisualStyleBackColor = true;
             // 
-            // btnBookFlight
+            // rbtFirstClass
             // 
-            this.btnBookFlight.Location = new System.Drawing.Point(7, 106);
-            this.btnBookFlight.Name = "btnBookFlight";
-            this.btnBookFlight.Size = new System.Drawing.Size(75, 23);
-            this.btnBookFlight.TabIndex = 7;
-            this.btnBookFlight.Text = "Book Flight";
-            this.btnBookFlight.UseVisualStyleBackColor = true;
+            this.rbtFirstClass.AutoSize = true;
+            this.rbtFirstClass.Location = new System.Drawing.Point(7, 83);
+            this.rbtFirstClass.Name = "rbtFirstClass";
+            this.rbtFirstClass.Size = new System.Drawing.Size(72, 17);
+            this.rbtFirstClass.TabIndex = 5;
+            this.rbtFirstClass.TabStop = true;
+            this.rbtFirstClass.Text = "First Class";
+            this.rbtFirstClass.UseVisualStyleBackColor = true;
             // 
-            // tbxNameFirst
+            // lblDate
             // 
-            this.tbxNameFirst.Location = new System.Drawing.Point(68, 4);
-            this.tbxNameFirst.Name = "tbxNameFirst";
-            this.tbxNameFirst.Size = new System.Drawing.Size(100, 20);
-            this.tbxNameFirst.TabIndex = 8;
+            this.lblDate.AutoSize = true;
+            this.lblDate.Location = new System.Drawing.Point(4, 63);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(30, 13);
+            this.lblDate.TabIndex = 4;
+            this.lblDate.Text = "Date";
             // 
-            // tbxNameLast
+            // lblDestination
             // 
-            this.tbxNameLast.Location = new System.Drawing.Point(238, 7);
-            this.tbxNameLast.Name = "tbxNameLast";
-            this.tbxNameLast.Size = new System.Drawing.Size(100, 20);
-            this.tbxNameLast.TabIndex = 9;
+            this.lblDestination.AutoSize = true;
+            this.lblDestination.Location = new System.Drawing.Point(178, 33);
+            this.lblDestination.Name = "lblDestination";
+            this.lblDestination.Size = new System.Drawing.Size(54, 13);
+            this.lblDestination.TabIndex = 3;
+            this.lblDestination.Text = "Destiation";
             // 
-            // tbxOrigin
+            // lblOrign
             // 
-            this.tbxOrigin.Location = new System.Drawing.Point(68, 30);
-            this.tbxOrigin.Name = "tbxOrigin";
-            this.tbxOrigin.Size = new System.Drawing.Size(100, 20);
-            this.tbxOrigin.TabIndex = 10;
+            this.lblOrign.AutoSize = true;
+            this.lblOrign.Location = new System.Drawing.Point(4, 33);
+            this.lblOrign.Name = "lblOrign";
+            this.lblOrign.Size = new System.Drawing.Size(34, 13);
+            this.lblOrign.TabIndex = 2;
+            this.lblOrign.Text = "Origin";
             // 
-            // tbxDestination
+            // lblNameLast
             // 
-            this.tbxDestination.Location = new System.Drawing.Point(238, 30);
-            this.tbxDestination.Name = "tbxDestination";
-            this.tbxDestination.Size = new System.Drawing.Size(100, 20);
-            this.tbxDestination.TabIndex = 11;
+            this.lblNameLast.AutoSize = true;
+            this.lblNameLast.Location = new System.Drawing.Point(174, 7);
+            this.lblNameLast.Name = "lblNameLast";
+            this.lblNameLast.Size = new System.Drawing.Size(58, 13);
+            this.lblNameLast.TabIndex = 1;
+            this.lblNameLast.Text = "Last Name";
             // 
-            // dateTimePicker1
+            // lblNameFirst
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(68, 57);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 12;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(89, 105);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 13;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.lblNameFirst.AutoSize = true;
+            this.lblNameFirst.Location = new System.Drawing.Point(4, 4);
+            this.lblNameFirst.Name = "lblNameFirst";
+            this.lblNameFirst.Size = new System.Drawing.Size(57, 13);
+            this.lblNameFirst.TabIndex = 0;
+            this.lblNameFirst.Text = "First Name";
             // 
             // panel1
             // 
@@ -207,14 +209,14 @@
             this.tbxBordingPass.TabIndex = 0;
             this.tbxBordingPass.Text = "";
             // 
-            // Form1
+            // BookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(372, 329);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlInfo);
-            this.Name = "Form1";
+            this.Name = "BookingForm";
             this.Text = "Form1";
             this.pnlInfo.ResumeLayout(false);
             this.pnlInfo.PerformLayout();
@@ -226,7 +228,7 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlInfo;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFlighDate;
         private System.Windows.Forms.TextBox tbxDestination;
         private System.Windows.Forms.TextBox tbxOrigin;
         private System.Windows.Forms.TextBox tbxNameLast;

@@ -44,13 +44,41 @@ namespace Lab7
         // Do the stuff to book the flight
         private void bookFlight ()
         {
+            if ( tbxNameFirst.Text == "" || tbxNameLast.Text == "" || tbxOrigin.Text == "" || tbxDestination.Text == "" )
+            {
+                MessageBox.Show("Please fill out all fields.");
+                return;
+            }
+
             // Get the information
             string nameFirst = tbxNameFirst.Text;
             string nameLast = tbxNameLast.Text;
             string origin = tbxOrigin.Text;
             string destination = tbxDestination.Text;
-            DateTime departure = dtpFlighDate.Value;
-
+            DateTime depart = dtpFlighDate.Value;
+            DateTime departureDate = new DateTime();
+            if ( rbtMorning.Checked )
+            {
+                departureDate = new DateTime(depart.Year, depart.Month, depart.Day, 6, 5, 0);
+            }
+            else if ( rbtNoon.Checked )
+            {
+                departureDate = new DateTime(depart.Year, depart.Month, depart.Day, 12, 15, 0);
+            }
+            else if ( rbtEvening.Checked )
+            {
+                departureDate = new DateTime(depart.Year, depart.Month, depart.Day, 17, 45, 0);
+            }
+            else if ( rbtNight.Checked )
+            {
+                departureDate = new DateTime(depart.Year, depart.Month, depart.Day, 23, 30, 0);
+            }
+            else
+            {
+                MessageBox.Show("Please select a departure time.");
+                return;
+            }
+            
             // Assign a seat
             int seatNumber = 0;
             string section = "";
@@ -67,6 +95,7 @@ namespace Lab7
             else
             {
                 MessageBox.Show("Please select First Class or Ecomnomy.");
+                return;
             }
 
             // Get the flight number
@@ -75,8 +104,8 @@ namespace Lab7
             // print the ticket
             string ticket = "Last Name: " + nameLast + "\tFirst Name: " + nameFirst + "\n\n" +
                             "Origin: " + origin + "\tDestination: " + destination + "\n\n" +
-                            "Fight Number: " + filghtNumber.ToString() + "\n" + 
-                            "Departure: " + departure.ToString() + "\n\n" +
+                            "Fight Number: " + filghtNumber.ToString() + "\n" +
+                            "Departure: " + departureDate.ToString() + "\n\n" +
                             "Section: " + section + "\n" +
                             "Seat Number: " + seatNumber.ToString() + "\n";
             tbxBordingPass.Text = ticket;
